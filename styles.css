@@ -1,6 +1,48 @@
 * {
     box-sizing: border-box;
 }
+header {
+    position: relative;
+}
+nav {
+    position: relative;
+    float: left;
+    width: 100%;
+    margin-bottom: 50px;
+    background-color: #000;
+    height: 70px;
+}
+
+
+nav ul li h2 {
+    display: inline;
+    font-family: Raleway;
+
+}
+
+ .logo {
+     float: left;
+     display: inline;
+     border: none;
+     color: #FFF;
+ }
+
+nav ul li{
+    display: inline;
+    float: right;
+
+}
+
+nav ul li a {
+    border: 1px solid #FFF;
+    text-decoration: none;
+    color: #FFF;
+    padding: 10px;
+    height: 100%;
+
+}
+
+
 
 .jumboTron img{
     width: 100%;
@@ -25,6 +67,10 @@
     margin-bottom: 10px;
     height: 300px;
 
+}
+
+.svgIcon {
+    height: 150px;
 }
 
 .websiteImages {
