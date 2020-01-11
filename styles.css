@@ -1,6 +1,11 @@
 * {
     box-sizing: border-box;
 }
+
+.jumboTron img{
+    width: 100%;
+}
+
 .servicesSection {
     position: relative;
     text-align: center;
