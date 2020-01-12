@@ -10,22 +10,25 @@
 <body>
     <header>
         <nav>
-            <ul>
+            <ul class="navigation">
                 <li class="logo"><h2>Mark Grover Web Designer</h2></li>
                 <li><a href="index.html">Home</a></li>
-                <li><a href="about.html">About</a></li>
-                <li><a href="contact.html">Contact</a></li>
+                <li class="aboutLink"><a href="#">About</a></li>
+                <li class="servicesLink"><a href="#">Services</a></li>
+                <li class="projectsLink"><a href="#">Projects</a></li>
+                <li class="contactLink"><a href="#">Contact</a></li>
             </ul>
         </nav>
     </header>
     <section>
-        <div class="jumboTron">
-            <img class="jumbotronImage" src="images/webdesign-3411373_1280.jpg" alt="web designer picture">
+        <div class="jumbotron">
+            <div class="jumbotronOverlay"></div>
+            <img class="jumbotronImage" src="images/laptop-2838921_1280.jpg" alt="web designer picture">
         </div>
     </section>
     <section class="servicesSection">
         <div class="horizontalLine"></div>
-        <h2 class="servicesTitle">Services</h2>
+        <h2 id="services" class="title servicesTitle">Services</h2>
         <div class="horizontalLine"></div>
         <div class="servicesContainer">
             <div class="services">
@@ -65,7 +68,7 @@
     </section>
     <section class="projects">
         <div class="horizontalLine"></div>
-        <h2 class="projectsTitle">Projects</h2>
+        <h2 id="projects" class="title projectsTitle">Projects</h2>
         <div class="horizontalLine"></div>
     </section>
 
@@ -73,13 +76,13 @@
 
         <div class="imagesContainer">
             <div class="websiteImage">
-                <a href="https://aquarianpoolandspa.com">
+                <a href="https://aquarianpoolandspa.com" target="_blank">
                     <img src="images/aps.png" alt="Picture of Aquarian Pool and Spa Website"></a>
             </div>
         </div>
         <div class="imagesContainer">
             <div class="websiteImage">
-                <a href="https://originalcontracting.com">
+                <a href="https://originalcontracting.com" target="_blank">
                     <img src="images/original_contracting.png" alt="Picture of Original Contracting Website"></a>
             </div>
         </div>
@@ -100,6 +103,32 @@
 <!--            </div>-->
 <!--        </div>-->
 <!--    </section>-->
+    <div class="aboutContainer">
+        <div class="horizontalLine"></div>
+        <h2 id="about" class="title aboutTitle">About</h2>
+        <div class="horizontalLine"></div>
+
+    </div>
+    <section class="about">
+        <div class="aboutContainer">
+            <div class="aboutContent">
+
+                <p>
+                    Hello, my name is Mark Grover and I'm a self taught Web Designer with more then 5 years Experience designing responsive web sites.
+                    Programming is my passion. I have experience with <strong>WordPress</strong> and <strong>React</strong>. I also have experience programming with
+                    <strong>Javascript, PHP</strong> and <strong>Python</strong>. When having your website built it's important to have your site responsive. You want to make sure your
+                    site looks great no matter what the device your users may be on. I design sites that look great on mobile phones, tablets and desktop computers.
+                </p>
+            </div>
+
+        </div>
+    </section>
+    <div class="aboutContainer">
+        <div class="horizontalLine"></div>
+        <h2 id="contact" class="title aboutTitle">Contact</h2>
+        <div class="horizontalLine"></div>
+
+    </div>
     <section class="footer">
         <footer>
             <div class="contactInfo">
