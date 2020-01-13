@@ -16,13 +16,13 @@ header {
 
 }
 nav {
-    position: fixed;
+    position: relative;
     float: left;
     width: 100%;
     padding: 1px;
     background-color: #FFF;
     margin-top: 0px;
-    /*margin-bottom: 50px;*/
+    margin-bottom: 0px;
     /*background-color: #FFF;*/
     height: 70px;
     z-index: 10;
@@ -83,7 +83,7 @@ nav ul li a:hover {
 }
 
 .jumbotron img{
-    margin-top: 70px;
+    /*margin-top: 70px;*/
     width: 100%;
     height: 600px;
 }
@@ -102,8 +102,9 @@ nav ul li a:hover {
 .services {
     /*display: inline-block;*/
     /*width: 31%;*/
+    background-color: rgba(54,119,254,0.02);
     float: left;
-    border: 1px solid #3170db;
+    border: 1px solid rgba(54,119,254,0.04);
     box-shadow: 2px 2px 3px #CCC;
     border-radius: 10px;
     padding: 10px;
@@ -235,7 +236,8 @@ i.fa-twitter-square {
 
 h2.servicesTitle, .projectsTitle, .aboutTitle{
     display: inline-block;
-    box-shadow: 2px 2px 3px #000;
+    /*box-shadow: 2px 2px 3px #000;*/
+    border: 1px solid #3170db;
     border-radius: 50px;
     padding: 20px;
 }
@@ -270,6 +272,19 @@ h2.servicesTitle, .projectsTitle, .aboutTitle{
 }
 
 .title {
-    color: #FFF;
-    background-color: #3170db;
+    color: #3170db;
+    /*background-color: #3170db;*/
+    background-color: rgba(54,119,254,0.04);
+}
+
+.formContainer {
+    position: relative;
+    width: 50%;
+    margin: auto;
+    padding: 10px;
+    border: 1px solid grey;
+}
+
+.formName, .formComment, .formEmail, .formPhone {
+    display: inline-block;
 }
