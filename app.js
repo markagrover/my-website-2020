@@ -41,3 +41,14 @@ var contactLink = document.querySelector(".contactLink");
 contactLink.addEventListener('click', function(){
    smoothScroll('#contact', 1500);
 });
+
+// google map
+function initMap() {
+  // The location of Medway
+  var medway = {lat: 42.21517, lng: -71.4334689};
+  // The map, centered at Medway
+  var map = new google.maps.Map(
+      document.getElementById('map'), {zoom: 10, center: medway});
+  // The marker, positioned at Medway
+  var marker = new google.maps.Marker({position: medway, map: map});
+}
