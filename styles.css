@@ -340,6 +340,12 @@ h2.servicesTitle, .projectsTitle, .aboutTitle{
     color: #3170db;
 }
 
+.contactMessage .message {
+    color: #3170db;
+    font-size: 28px;
+    font-family:Raleway;
+}
+
 .contactContainer {
     margin: auto;
     position: relative;

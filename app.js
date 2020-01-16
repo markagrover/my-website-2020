@@ -52,3 +52,27 @@ function initMap() {
   // The marker, positioned at Medway
   var marker = new google.maps.Marker({position: medway, map: map});
 }
+
+// stop form from submitting
+// this is the id of the form
+$("#contactForm").submit(function(e) {
+
+  e.preventDefault(); // avoid to execute the actual submit of the form.
+
+  var form = $(this);
+  var url = form.attr('action');
+
+  $.ajax({
+    type: "GET",
+    url: url,
+    data: form.serialize(), // serializes the form's elements.
+    success: function(data)
+    {
+      $('.contactContainer').remove();
+      $('.contactMessage').html("<p class='message'>Thank You For Contacting Me. I will be in touch shortly! </p>");
+    }
+  });
+
+
+});
+

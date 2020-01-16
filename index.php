@@ -5,6 +5,10 @@
     <title>Mark Grover Web Designer</title>
     <link rel="stylesheet" href="styles.css">
     <link href="https://fonts.googleapis.com/css?family=Raleway:500i&display=swap" rel="stylesheet">
+    <script
+        src="https://code.jquery.com/jquery-3.4.1.min.js"
+        integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+        crossorigin="anonymous"></script>
     <script src="https://kit.fontawesome.com/8bad5e6eb3.js" crossorigin="anonymous"></script>
 </head>
 <body>
@@ -12,7 +16,7 @@
         <nav>
             <ul class="navigation">
                 <li class="logo"><h2>Mark Grover Web Designer</h2></li>
-                <li><a href="index.html">Home</a></li>
+                <li><a href="index.php">Home</a></li>
                 <li class="aboutLink"><a href="#">About</a></li>
                 <li class="servicesLink"><a href="#">Services</a></li>
                 <li class="projectsLink"><a href="#">Projects</a></li>
@@ -123,13 +127,15 @@
 
         </div>
     </section>
+
     <div class="mainContactContainer">
         <div class="horizontalLine"></div>
         <h2 id="contact" class="title aboutTitle">Contact</h2>
         <div class="horizontalLine"></div>
+        <div class="contactMessage"></div>
         <div class="contactContainer">
             <div class="formContainer">
-                <form action="#">
+                <form id="contactForm" action="formSubmit.php" method="get">
                     <div class="formSection">
     <!--                    <label class="formName" for="name">Name:</label>-->
                         <input type="text" id="name" name="name" placeholder="Name">
