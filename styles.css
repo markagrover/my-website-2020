@@ -234,7 +234,7 @@ i.fa-twitter-square {
     padding-bottom: 5px;
 }
 
-h2.servicesTitle, .projectsTitle, .aboutTitle{
+h2.servicesTitle, .projectsTitle, .aboutTitle, .contactTitle{
     display: inline-block;
     /*box-shadow: 2px 2px 3px #000;*/
     border: 1px solid #3170db;
@@ -363,3 +363,13 @@ h2.servicesTitle, .projectsTitle, .aboutTitle{
     background-color: grey;
     margin-bottom: 0px;
 }
+
+/*animation for titles*/
+.flip {
+    transition: transform 1.5s;
+    transform: rotateX(360deg);
+}
+
+/*.flip:hover {*/
+
+/*}*/

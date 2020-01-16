@@ -130,7 +130,7 @@
 
     <div class="mainContactContainer">
         <div class="horizontalLine"></div>
-        <h2 id="contact" class="title aboutTitle">Contact</h2>
+        <h2 id="contact" class="title contactTitle">Contact</h2>
         <div class="horizontalLine"></div>
         <div class="contactMessage"></div>
         <div class="contactContainer">

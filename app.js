@@ -1,3 +1,23 @@
+// animation for title flip
+function titleFlip(target){
+  var target = document.querySelector(target);
+  var targetPosition = target.getBoundingClientRect().top;
+  var windowHeight = window.innerHeight;
+  if(targetPosition < windowHeight - 150){
+    if(!target.classList.contains('flip')){
+      target.classList.toggle("flip");
+    }
+  }
+}
+window.addEventListener('scroll', function(e){
+
+  titleFlip('.servicesTitle');
+  titleFlip('.projectsTitle');
+  titleFlip('.aboutTitle');
+  titleFlip('.contactTitle');
+})
+
+// smooth scroll for navigation
 function smoothScroll(target, duration){
     var target = document.querySelector(target);
     var targetPosition = target.getBoundingClientRect().top;
