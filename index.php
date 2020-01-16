@@ -191,6 +191,9 @@
             </div>
         </footer>
     </section>
+    <div class="pageUp">
+        <i class="fas fa-chevron-circle-up"></i>
+    </div>
     <script src="app.js"></script>
     <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAOUsur6ANosEbusDxD2w7CPMEtI1RVDdk&callback=initMap"></script>
 </body>

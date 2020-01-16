@@ -370,6 +370,12 @@ h2.servicesTitle, .projectsTitle, .aboutTitle, .contactTitle{
     transform: rotateX(360deg);
 }
 
-/*.flip:hover {*/
+.pageUp {
+    position: fixed;
+    bottom: 50px;
+    right: 50px;
+}
 
-/*}*/
+.pageUp i{
+    color: #3170db;
+}

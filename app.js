@@ -1,3 +1,9 @@
+// up arrow to take you to the top of the page
+var pageUp = document.querySelector('.pageUp');
+pageUp.addEventListener('click', function(){
+  smoothScroll("nav", 2000);
+})
+
 // animation for title flip
 function titleFlip(target){
   var target = document.querySelector(target);
