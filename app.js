@@ -7,6 +7,8 @@ function titleFlip(target){
     if(!target.classList.contains('flip')){
       target.classList.toggle("flip");
     }
+  } else if (targetPosition > windowHeight){
+    target.classList.remove("flip");
   }
 }
 window.addEventListener('scroll', function(e){
