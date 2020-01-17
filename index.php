@@ -186,7 +186,7 @@
                 Thursday  <span class="hours">8am - 6pm</span> <br>
                 Friday    <span class="hours">8am - 5pm</span> <br>
                 Saturday  <span class="hours">10am - 3pm</span>
-            </p>
+                </p>
             </div>
 
             <div class="socialMediaLinks">

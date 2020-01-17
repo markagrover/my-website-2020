@@ -197,7 +197,7 @@ footer .contactInfo, footer .hoursContainer, footer .socialMediaLinks {
     display: inline-block;
     font-size: 20px;
     font-family: Raleway;
-    width: 33%;
+    /*width: 33%;*/
     padding: 10px;
     color: #FFF;
     text-align: center;
@@ -436,14 +436,14 @@ h2.servicesTitle, .projectsTitle, .aboutTitle, .contactTitle{
     }
 
     footer {
-        text-align: center;
+        /*text-align: center;*/
         display: flex;
         flex-direction: column;
-        justify-content: center;
+        /*justify-content: center;*/
         align-items: center;
 
     }
-
+    
     .operatingHours {
         width: 100%;
         border-right: none;
@@ -481,8 +481,7 @@ h2.servicesTitle, .projectsTitle, .aboutTitle, .contactTitle{
     }
 
     .contactContainer {
-        margin: auto;
-        position: relative;
+
         border: 2px solid #3170db;
         width: 604px;
         height: 400px;
@@ -506,7 +505,9 @@ h2.servicesTitle, .projectsTitle, .aboutTitle, .contactTitle{
         width: 300px;
         margin: auto;
         padding: 40px;
+        /*border: 4px solid #000;*/
         text-align: left;
+        /*border-radius: 4px;*/
         background-color: rgba(54,119,254,0.04)
     }
 
