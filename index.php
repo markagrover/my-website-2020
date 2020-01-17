@@ -27,7 +27,12 @@
     <section>
         <div class="jumbotron">
             <div class="jumbotronOverlay"></div>
-            <img class="jumbotronImage" src="images/laptop-2838921_1280.jpg" alt="web designer picture">
+            <picture>
+                <source media="(max-width: 650px)" srcset="images/jumbotron_md.jpg">
+                <source media="(max-width: 465px)" srcset="images/jumbotron_sm.jpg">
+                <img class="jumbotronImage" src="images/jumbotron_lg.jpg" alt="Web designer picture">
+            </picture>
+<!--            <img class="jumbotronImage" src="images/jumbotron_lg.jpg" alt="web designer picture">-->
         </div>
     </section>
     <section class="servicesSection">
