@@ -77,7 +77,6 @@ nav ul li a:hover {
     position: absolute;
     top:70px;
     left:0;
-    height: auto;
     width: 100%;
     background-color: rgba(0,0,0,.4);
 }
@@ -103,14 +102,14 @@ nav ul li a:hover {
     /*display: inline-block;*/
     /*width: 31%;*/
     background-color: rgba(54,119,254,0.02);
-    float: left;
+    /*float: left;*/
     border: 1px solid rgba(54,119,254,0.04);
     box-shadow: 2px 2px 3px #CCC;
     border-radius: 10px;
     padding: 10px;
     margin: 0 10px;
-    margin-bottom: 10px;
     height: 300px;
+    flex: 0 1 100%;
 
 }
 
@@ -201,6 +200,7 @@ footer .contactInfo, footer .hoursContainer, footer .socialMediaLinks {
     padding: 10px;
     color: #FFF;
     text-align: center;
+    flex-grow: 1;
 }
 
 /*.iframeSection{*/
@@ -443,7 +443,7 @@ h2.servicesTitle, .projectsTitle, .aboutTitle, .contactTitle{
         align-items: center;
 
     }
-    
+
     .operatingHours {
         width: 100%;
         border-right: none;

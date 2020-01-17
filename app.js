@@ -1,3 +1,14 @@
+// make jumbotronOverlay the height of the image
+function createOverlay(){
+  const overlay = document.querySelector(".jumbotronOverlay");
+  const imageHeight = document.querySelector('.jumbotron img').height;
+  overlay.style = "height:" +imageHeight+"px";
+}
+createOverlay();
+window.addEventListener('resize', function(){
+  createOverlay();
+});
+
 // up arrow to take you to the top of the page
 var pageUp = document.querySelector('.pageUp');
 pageUp.addEventListener('click', function(){
@@ -100,7 +111,10 @@ $("#contactForm").submit(function(e) {
       $('.contactMessage').html("<p class='message'>Thank You For Contacting Me. I will be in touch shortly! </p>");
     }
   });
-
-
 });
+
+
+
+
+
 
