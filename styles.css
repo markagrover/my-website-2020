@@ -45,9 +45,22 @@ nav ul li h2 {
 
 }
 
+.hamburgerIcon {
+    position: absolute;
+    right: 20px;
+    top: 0px;
+    color: #3170db;
+    display: none;
+
+}
+
  .logo {
-     float: left;
-     display: inline;
+     position: absolute;
+     left: 20px;
+     top: 0px;
+     z-index: 100;
+
+     /*display: inline;*/
      border: none;
      color: #3170db;
  }
@@ -387,18 +400,65 @@ h2.servicesTitle, .projectsTitle, .aboutTitle, .contactTitle{
 }
 
 @keyframes slide-up {
+     0% {
+         opacity: 0;
+         transform: translateY(20px);
+     }
+     100% {
+         opacity: 1;
+         transform: translateY(0);
+     }
+ }
+
+@keyframes slide-in {
     0% {
         opacity: 0;
-        transform: translateY(20px);
+
     }
     100% {
         opacity: 1;
-        transform: translateY(0);
+
     }
 }
 
 /* Small devices (portrait tablets and large phones, 600px and up) */
-@media only screen and (min-width: 0px) {
+@media only screen and (min-width: 0px) and (max-width: 992px) {
+    .hamburgerIcon {
+        display: block;
+    }
+
+    nav ul{
+        position: absolute;
+
+        display: block;
+        float: right;
+        background-color: #333;
+        margin-top: 50px;
+        padding: 0px;
+        width: 25%;
+        text-align: center;
+    }
+    .hideNav {
+        display: none;
+        right: -400px;
+    }
+    .showNav {
+        display: block;
+        right: 0;
+        animation: slide-in 0.4s ease;
+    }
+    nav ul li a {
+        display: inline-block;
+        width: 100%;
+        border-top: 1px solid white;
+        color: white;
+    }
+    nav ul li a:hover {
+        background-color: #CCCCCC;
+    }
+    .indexLink {
+        border: none;
+    }
     .servicesContainer {
         flex-direction: column;
     }
@@ -457,7 +517,7 @@ h2.servicesTitle, .projectsTitle, .aboutTitle, .contactTitle{
 }
 
 /* Medium devices (landscape tablets, 768px and up) */
-@media only screen and (min-width: 450px) {
+@media only screen and (min-width: 400px) {
     .formContainer {
         width: 400px;
         position: relative;

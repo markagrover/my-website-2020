@@ -13,15 +13,19 @@
 </head>
 <body>
     <header>
+        <h2 class="logo">Mark Grover Web Designer</h2>
         <nav>
-            <ul class="navigation">
-                <li class="logo"><h2>Mark Grover Web Designer</h2></li>
-                <li><a href="index.php">Home</a></li>
+            <ul class="hideNav navigation">
+
+                <li><a class="indexLink" href="index.php">Home</a></li>
                 <li class="aboutLink"><a href="#">About</a></li>
                 <li class="servicesLink"><a href="#">Services</a></li>
                 <li class="projectsLink"><a href="#">Projects</a></li>
                 <li class="contactLink"><a href="#">Contact</a></li>
             </ul>
+            <a href="#" class="hamburgerIcon"">
+                <i class="fa fa-bars"></i>
+            </a>
         </nav>
     </header>
     <section>

@@ -9,6 +9,27 @@ window.addEventListener('resize', function(){
   createOverlay();
 });
 
+// create mobile navigation
+function toggleNavigation(){
+  var nav = document.querySelector('nav ul');
+  var hamburgerButton = document.querySelector('.hamburgerIcon');
+  hamburgerButton.addEventListener('click', function(e){
+    if(nav.classList.contains('hideNav')){
+      nav.classList.remove('hideNav');
+      nav.classList.add('showNav');
+    } else {
+      nav.classList.remove('showNav');
+      nav.classList.add('hideNav');
+    }
+
+    console.log("toggling nav");
+  });
+
+}
+toggleNavigation();
+
+
+
 // up arrow to take you to the top of the page
 var pageUp = document.querySelector('.pageUp');
 pageUp.addEventListener('click', function(){
