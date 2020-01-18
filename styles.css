@@ -15,6 +15,7 @@ header {
     padding: 0px;
 
 }
+
 nav {
     position: relative;
     float: left;
@@ -23,7 +24,6 @@ nav {
     background-color: #FFF;
     margin-top: 0px;
     margin-bottom: 0px;
-    /*background-color: #FFF;*/
     height: 70px;
     z-index: 10;
 }
@@ -41,8 +41,6 @@ nav ul li h2 {
     margin-left: 10px;
     display: inline;
     font-family: Raleway;
-
-
 }
 
 .hamburgerIcon {
@@ -59,8 +57,6 @@ nav ul li h2 {
      left: 20px;
      top: 0px;
      z-index: 100;
-
-     /*display: inline;*/
      border: none;
      color: #3170db;
  }
@@ -76,16 +72,17 @@ nav ul li a {
     color: #000;
     height: 70px;
     padding: 20px;
-
 }
 
 nav ul li a:hover {
     color: #3170db;
 }
+
 .jumbotron{
     position: relative;
 
 }
+
 .jumbotronOverlay {
     position: absolute;
     top:70px;
@@ -95,7 +92,6 @@ nav ul li a:hover {
 }
 
 .jumbotron img{
-    /*margin-top: 70px;*/
     width: 100%;
     height: auto;
 }
@@ -105,17 +101,15 @@ nav ul li a:hover {
     text-align: center;
     margin-top: 100px;
 }
+
 .servicesContainer {
     display: flex;
     flex-direction: row;
     margin-top: 50px;
-
 }
+
 .services {
-    /*display: inline-block;*/
-    /*width: 31%;*/
     background-color: rgba(54,119,254,0.02);
-    /*float: left;*/
     border: 1px solid rgba(54,119,254,0.04);
     box-shadow: 2px 2px 3px #CCC;
     border-radius: 10px;
@@ -123,7 +117,6 @@ nav ul li a:hover {
     margin: 0 10px;
     height: 300px;
     flex: 0 1 100%;
-
 }
 
 .svgIcon {
@@ -137,43 +130,30 @@ nav ul li a:hover {
 }
 
 .imagesContainer {
-
     display: inline-block;
     float: left;
     height: 300px;
     width: 50%;
 }
+
 .projects {
     text-align: center;
     margin-top: 100px;
     margin-bottom: 50px;
 }
+
 .websiteImages {
     width: 100%;
     text-align: center;
     display: inline-block;
     margin-bottom: 100px;
-
 }
-
 
 .websiteImages a img{
     display: inline-block;
     height: 300px;
     box-shadow: 2px 2px 5px #CCC;
-
 }
-
-/*.iframeContainer {*/
-/*    height: 380px;*/
-/*    !*background-color: #CCC;*!*/
-/*}*/
-
-/*.iframe {*/
-/*    width: 50%;*/
-/*    float:left;*/
-/*    padding: 0 10px;*/
-/*}*/
 
 .viewSite a{
     margin-top: -30px;
@@ -200,10 +180,6 @@ nav ul li a:hover {
     text-align: center;
 }
 
-/*iframe{*/
-/*    !*border:1px solid grey;*!*/
-/*    box-shadow: 2px 2px 3px rgba(11, 5, 10, 0.55), -1px -1px rgba(11, 5, 10, 0.55);*/
-/*}*/
 footer {
     display: flex;
     flex-direction: row;
@@ -214,16 +190,12 @@ footer .contactInfo, footer .hoursContainer, footer .socialMediaLinks {
     display: inline-block;
     font-size: 20px;
     font-family: Raleway;
-    /*width: 33%;*/
     padding: 10px;
     color: #FFF;
     text-align: center;
     flex-grow: 1;
 }
 
-/*.iframeSection{*/
-/*    background-color: #FFF;*/
-/*}*/
 .footer {
     background-color: #000;
     padding: 10px;
@@ -256,7 +228,6 @@ i.fa-twitter-square {
 
 h2.servicesTitle, .projectsTitle, .aboutTitle, .contactTitle{
     display: inline-block;
-    /*box-shadow: 2px 2px 3px #000;*/
     border: 1px solid #3170db;
     border-radius: 50px;
     padding: 20px;
@@ -290,7 +261,7 @@ h2.servicesTitle, .projectsTitle, .aboutTitle, .contactTitle{
 
 .aboutMeContainer {
     display: flex;
-    background-color: rgba(54,119,254,0.09);
+    background-color: rgba(54,119,254,0.04);
     -webkit-box-shadow:  2px 2px 3px #CCC;
     -moz-box-shadow:  2px 2px 3px #CCC;
     box-shadow:  2px 2px 3px #CCC;
@@ -299,14 +270,15 @@ h2.servicesTitle, .projectsTitle, .aboutTitle, .contactTitle{
     border-radius:10px;
     margin-bottom: 100px;
 }
+
 .aboutMeContainer img {
     border-bottom-left-radius: 10px;
     border-top-left-radius: 10px;
     height: 300px;
     width: auto;
 }
+
 .aboutContent {
-    /*height: 200px;*/
     padding: 20px;
 }
 
@@ -329,15 +301,12 @@ h2.servicesTitle, .projectsTitle, .aboutTitle, .contactTitle{
 .formContainer {
     position: absolute;
     left: 0;
-    /*-webkit-box-shadow:  2px 2px 3px #CCC;*/
     display: inline-block;
     height: 100%;
     width: 300px;
     margin: auto;
     padding: 40px;
-    /*border: 4px solid #000;*/
     text-align: left;
-    /*border-radius: 4px;*/
     background-color: rgba(54,119,254,0.04)
 }
 
@@ -352,6 +321,7 @@ h2.servicesTitle, .projectsTitle, .aboutTitle, .contactTitle{
     border: 2px solid #3170db;
 
 }
+
 #name, #email, #phone {
     height: 40px;
 }
@@ -390,6 +360,12 @@ h2.servicesTitle, .projectsTitle, .aboutTitle, .contactTitle{
     margin: auto;
     position: relative;
     border: 2px solid #3170db;
+    -webkit-border-radius:5px;
+    -moz-border-radius:5px;
+    -webkit-box-shadow:  2px 2px 3px #CCC;
+    -moz-box-shadow:  2px 2px 3px #CCC;
+    box-shadow:  2px 2px 3px #CCC;
+    border-radius:5px;
     width: 604px;
     height: 400px;
 }
@@ -446,9 +422,11 @@ h2.servicesTitle, .projectsTitle, .aboutTitle, .contactTitle{
 
 /* Small devices (portrait tablets and large phones, 600px and up) */
 @media only screen and (min-width: 0px) and (max-width: 992px) {
+
     .aboutMeContainer {
         flex-direction: column;
     }
+
     .aboutMeContainer img {
         -webkit-box-shadow:  2px 2px 5px #CCC;
         -moz-box-shadow:  2px 2px 5px #CCC;
@@ -461,18 +439,12 @@ h2.servicesTitle, .projectsTitle, .aboutTitle, .contactTitle{
         margin: auto;
         margin-top: 50px;
     }
-    /*.bar {*/
-        /*display: block;*/
-        /*margin-top: 10px;*/
-        /*border-radius: 2px;*/
-        /*width: 30px;*/
-        /*height: 5px;*/
-        /*background-color: #3170db;*/
-    /*}*/
+
     #footerMap {
         height: 300px;
         width: 100%;
     }
+
     .hamburgerIcon:first-child {
         margin-top: 0px;
     }
@@ -488,13 +460,13 @@ h2.servicesTitle, .projectsTitle, .aboutTitle, .contactTitle{
         box-shadow: 2px 2px 3px #3170db;
 
     }
+
     .hamburgerIcon i {
         font-size: 30px;
     }
 
     nav ul{
         position: absolute;
-
         display: block;
         float: right;
         background-color: #333;
@@ -503,36 +475,42 @@ h2.servicesTitle, .projectsTitle, .aboutTitle, .contactTitle{
         width: 50%;
         text-align: center;
     }
+
     .hideNav {
         display: none;
         right: -400px;
     }
+
     .showNav {
         display: block;
         right: 0;
         animation: fade-in 0.4s ease;
     }
+
     nav ul li a {
         display: inline-block;
         width: 100%;
         border-top: 1px solid white;
         color: white;
     }
+
     nav ul li a:hover {
         background-color: #CCCCCC;
     }
+
     .indexLink {
         border: none;
     }
+
     .servicesContainer {
         flex-direction: column;
     }
+
     .services {
         margin-top: 50px;
     }
 
     .imagesContainer {
-
         width: 100%;
         margin-top: 50px;
     }
@@ -547,7 +525,6 @@ h2.servicesTitle, .projectsTitle, .aboutTitle, .contactTitle{
 
     #map {
         display: none;
-
     }
 
     .formContainer {
@@ -558,16 +535,13 @@ h2.servicesTitle, .projectsTitle, .aboutTitle, .contactTitle{
     }
     .footer {
         display: block;
-
         position: relative;
         width: 100%;
     }
 
     footer {
-        /*text-align: center;*/
         display: flex;
         flex-direction: column;
-        /*justify-content: center;*/
         align-items: center;
 
     }
@@ -586,11 +560,3 @@ h2.servicesTitle, .projectsTitle, .aboutTitle, .contactTitle{
     }
 }
 
-/* Medium devices (landscape tablets, 768px and up) */
-@media only screen and (min-width: 400px) {
-    /*.formContainer {*/
-        /*width: 400px;*/
-        /*position: relative;*/
-        /*margin-left: -100px;*/
-    /*}*/
-}

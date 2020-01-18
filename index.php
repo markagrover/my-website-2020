@@ -127,7 +127,7 @@
     </div>
     <section class="about">
         <div class="aboutMeContainer">
-            <img src="images/profile.JPG" alt="">
+            <img src="images/profile.jpeg" alt="">
             <div class="aboutContent">
 
                 <p>
