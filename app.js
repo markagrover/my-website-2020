@@ -109,8 +109,11 @@ function initMap() {
   // The map, centered at Medway
   var map = new google.maps.Map(
       document.getElementById('map'), {zoom: 10, center: medway});
+  var footerMap = new google.maps.Map(
+    document.getElementById('footerMap'), {zoom: 10, center: medway});
   // The marker, positioned at Medway
   var marker = new google.maps.Marker({position: medway, map: map});
+  var footerMarker = new google.maps.Marker({position: medway, map: footerMap});
 }
 
 // stop form from submitting

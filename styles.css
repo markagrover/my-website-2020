@@ -204,6 +204,11 @@ nav ul li a:hover {
 /*    !*border:1px solid grey;*!*/
 /*    box-shadow: 2px 2px 3px rgba(11, 5, 10, 0.55), -1px -1px rgba(11, 5, 10, 0.55);*/
 /*}*/
+footer {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
 
 footer .contactInfo, footer .hoursContainer, footer .socialMediaLinks {
     display: inline-block;
@@ -305,6 +310,7 @@ h2.servicesTitle, .projectsTitle, .aboutTitle, .contactTitle{
 .formContainer {
     position: absolute;
     left: 0;
+    /*-webkit-box-shadow:  2px 2px 3px #CCC;*/
     display: inline-block;
     height: 100%;
     width: 300px;
@@ -388,7 +394,7 @@ h2.servicesTitle, .projectsTitle, .aboutTitle, .contactTitle{
 .pageUp {
     position: fixed;
     bottom: 50px;
-    right: 50px;
+    right: 30px;
 }
 
 .pageUp i{
@@ -410,21 +416,46 @@ h2.servicesTitle, .projectsTitle, .aboutTitle, .contactTitle{
      }
  }
 
-@keyframes slide-in {
+@keyframes fade-in {
     0% {
         opacity: 0;
-
     }
     100% {
         opacity: 1;
-
     }
 }
 
 /* Small devices (portrait tablets and large phones, 600px and up) */
 @media only screen and (min-width: 0px) and (max-width: 992px) {
+    /*.bar {*/
+        /*display: block;*/
+        /*margin-top: 10px;*/
+        /*border-radius: 2px;*/
+        /*width: 30px;*/
+        /*height: 5px;*/
+        /*background-color: #3170db;*/
+    /*}*/
+    #footerMap {
+        height: 300px;
+        width: 100%;
+    }
+    .hamburgerIcon:first-child {
+        margin-top: 0px;
+    }
+
     .hamburgerIcon {
+        margin-top: 10px;
         display: block;
+        padding: 5px;
+        background-color: rgba(54,119,254,0.04);
+        border-radius: 5px;
+        -webkit-box-shadow: 2px 2px 3px #3170db;
+        -moz-box-shadow: 2px 2px 3px #3170db;
+        box-shadow: 2px 2px 3px #3170db;
+
+    }
+    .hamburgerIcon i {
+        font-size: 30px;
     }
 
     nav ul{
@@ -435,7 +466,7 @@ h2.servicesTitle, .projectsTitle, .aboutTitle, .contactTitle{
         background-color: #333;
         margin-top: 50px;
         padding: 0px;
-        width: 25%;
+        width: 50%;
         text-align: center;
     }
     .hideNav {
@@ -445,7 +476,7 @@ h2.servicesTitle, .projectsTitle, .aboutTitle, .contactTitle{
     .showNav {
         display: block;
         right: 0;
-        animation: slide-in 0.4s ease;
+        animation: fade-in 0.4s ease;
     }
     nav ul li a {
         display: inline-block;
@@ -487,6 +518,9 @@ h2.servicesTitle, .projectsTitle, .aboutTitle, .contactTitle{
 
     .formContainer {
         width: 300px;
+        -webkit-box-shadow:  2px 2px 5px #CCC;
+        -moz-box-shadow:  2px 2px 5px #CCC;
+        box-shadow:  2px 2px 5px #CCC;
     }
     .footer {
         display: block;
@@ -513,79 +547,16 @@ h2.servicesTitle, .projectsTitle, .aboutTitle, .contactTitle{
         padding: 20px;
         text-align: center;
     }
-
+    .formContainer {
+        margin-left: -50px;
+    }
 }
 
 /* Medium devices (landscape tablets, 768px and up) */
 @media only screen and (min-width: 400px) {
-    .formContainer {
-        width: 400px;
-        position: relative;
-        margin-left: -100px;
-    }
-}
-
-/* Large devices (laptops/desktops, 992px and up) */
-@media only screen and (min-width: 992px) {
-    .servicesContainer {
-        flex-direction: row;
-
-    }
-
-    .imagesContainer {
-
-        display: inline-block;
-        float: left;
-        height: 300px;
-        width: 50%;
-    }
-
-    .contactContainer {
-
-        border: 2px solid #3170db;
-        width: 604px;
-        height: 400px;
-    }
-
-    #map {
-        position: absolute;
-        left: 300px;
-        width: 300px;
-        height: 100%;
-        display: inline-block;
-        background-color: grey;
-        margin-bottom: 0px;
-    }
-
-    .formContainer {
-        position: absolute;
-        left: 0;
-        display: inline-block;
-        height: 100%;
-        width: 300px;
-        margin: auto;
-        padding: 40px;
-        /*border: 4px solid #000;*/
-        text-align: left;
-        /*border-radius: 4px;*/
-        background-color: rgba(54,119,254,0.04)
-    }
-
-    footer{
-        display: flex;
-        flex-direction: row;
-    }
-
-    .operatingHours {
-        border-top: none;
-        border-bottom: none;
-        border-left: 2px solid #3170db;
-        border-right: 2px solid #3170db;
-
-    }
-}
-
-/* Extra large devices (large laptops and desktops, 1200px and up) */
-@media only screen and (min-width: 1200px) {
-
+    /*.formContainer {*/
+        /*width: 400px;*/
+        /*position: relative;*/
+        /*margin-left: -100px;*/
+    /*}*/
 }

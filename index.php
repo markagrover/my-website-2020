@@ -24,6 +24,9 @@
                 <li class="contactLink"><a href="#">Contact</a></li>
             </ul>
             <a href="#" class="hamburgerIcon"">
+<!--                <span class="bar"></span>-->
+<!--                <span class="bar"></span>-->
+<!--                <span class="bar"></span>-->
                 <i class="fa fa-bars"></i>
             </a>
         </nav>
@@ -169,6 +172,7 @@
 
 
     </div>
+    <div id="footerMap"></div>
     <section class="footer">
         <footer>
             <div class="contactInfo">
