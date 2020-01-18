@@ -21,20 +21,19 @@ function toggleNavigation(){
       nav.classList.remove('showNav');
       nav.classList.add('hideNav');
     }
-
-    console.log("toggling nav");
   });
 
 }
 toggleNavigation();
-
-
-
 // up arrow to take you to the top of the page
-var pageUp = document.querySelector('.pageUp');
-pageUp.addEventListener('click', function(){
-  smoothScroll("nav", 2000);
-})
+function pageUp(){
+  var pageUp = document.querySelector('.pageUp');
+  pageUp.addEventListener('click', function(){
+    smoothScroll("nav", 2000);
+  })
+}
+pageUp();
+
 
 // animation for title flip
 function titleFlip(target){
@@ -56,6 +55,19 @@ window.addEventListener('scroll', function(e){
   titleFlip('.aboutTitle');
   titleFlip('.contactTitle');
 })
+
+// hide navigation when page is scrolled out of view
+function removeNavOnScroll(){
+  const nav = document.querySelector('nav ul');
+  if(nav.classList.contains('showNav')){
+    const bottomOfNav = nav.getBoundingClientRect().bottom;
+    if(bottomOfNav < 0){
+      nav.classList.remove('showNav');
+      nav.classList.add('hideNav');
+    }
+  }
+}
+window.addEventListener('scroll', removeNavOnScroll);
 
 // smooth scroll for navigation
 function smoothScroll(target, duration){
