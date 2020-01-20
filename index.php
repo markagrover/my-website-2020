@@ -13,7 +13,7 @@
 </head>
 <body>
     <header>
-        <h2 class="logo">Mark Grover Web Designer</h2>
+        <div class="logo"><img src="images/logo.png" alt=""></div>
         <nav>
             <ul class="hideNav navigation">
 
@@ -34,11 +34,11 @@
     <section>
         <div class="jumbotron">
             <div class="jumbotronOverlay"></div>
-            <picture>
-                <source media="(max-width: 650px)" srcset="images/jumbotron_md.jpg">
-                <source media="(max-width: 465px)" srcset="images/jumbotron_sm.jpg">
-                <img class="jumbotronImage" src="images/jumbotron_lg.jpg" alt="Web designer picture">
-            </picture>
+<!--            <picture>-->
+<!--                <source media="(max-width: 650px)" srcset="images/jumbotron_md.jpg">-->
+<!--                <source media="(max-width: 465px)" srcset="images/jumbotron_sm.jpg">-->
+<!--                <img class="jumbotronImage" src="images/jumbotron_lg.jpg" alt="Web designer picture">-->
+<!--            </picture>-->
 <!--            <img class="jumbotronImage" src="images/jumbotron_lg.jpg" alt="web designer picture">-->
         </div>
     </section>
@@ -103,22 +103,6 @@
             </div>
         </div>
     </section>
-<!--    <section class="iframeSection">-->
-<!--        <div class="iframeContainer">-->
-<!--            <div class="iframe">-->
-<!--                <iframe src="https://aquarianpoolandspa.com" name="iframe_1" height="300" width="100%" frameborder="0"></iframe>-->
-<!--                <p class="viewSite">-->
-<!--                    <a href="https://aquarianpoolandspa.com" target="_blank">View Site</a>-->
-<!--                </p>-->
-<!--            </div>-->
-<!--            <div class="iframe">-->
-<!--                <iframe src="https://originalcontracting.com" height="300" width="100%" frameborder="0"></iframe>-->
-<!--                <p class="viewSite">-->
-<!--                    <a href="https://originalcontracting.com" target="_blank">View Site</a>-->
-<!--                </p>-->
-<!--            </div>-->
-<!--        </div>-->
-<!--    </section>-->
     <div class="aboutContainer">
         <div class="horizontalLine"></div>
         <h2 id="about" class="title aboutTitle">About</h2>

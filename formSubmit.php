@@ -28,8 +28,6 @@ catch(PDOException $e)
     echo "Connection failed: " . $e->getMessage();
 }
 
-//$sql = "INSERT INTO messages (name, email, phone, comment) VALUES ($name, $email, $phone, $comment)";
-
 $sql = "INSERT INTO messages (name, email, phone, comment) VALUES (?,?,?,?)";
 $stmt= $conn->prepare($sql);
 $stmt->execute([$name, $email, $phone, $comment]);
