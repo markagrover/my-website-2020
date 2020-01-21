@@ -8,6 +8,25 @@
 // window.addEventListener('resize', function(){
 //   createOverlay();
 // });
+function insertSVG(){
+
+  if(window.innerWidth < 1000){
+    var jumbotron = document.querySelector('.jumbotron');
+    // document.querySelector('.jumbotronOverlay').style.height = "0px";
+    var svg = document.createElement('img');
+    svg.src = 'images/logo.svg';
+    svg.style.height = "300px";
+    svg.classList.add('mobileJumbotronSVG');
+    jumbotron.appendChild(svg);
+  }
+  window.addEventListener('resize', function(){
+    if(!document.querySelector('.mobileJumbotronSVG')){
+      insertSVG();
+    }
+  });
+}
+insertSVG();
+
 
 // create mobile navigation
 function toggleNavigation(){

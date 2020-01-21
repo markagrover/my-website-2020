@@ -1,40 +1,40 @@
 :root {
-    --main-title-color: #EFA249;
+    --main-title-color: #DCD8D6;
     --main-title-bg-color: #6B5A52;
-    --main-strong-color: #EFA249;
+    --main-strong-color: #DCD8D6;
     --main-title-color: #EFA249;
     --main-services-bg-color: #6B5A52;
-    --main-services-border-color: #EFA249;
+    --main-services-border-color: #DCD8D6;
     --main-services-color: #FFF;
     --main-submit-hover-bg-color: #4F3928;
-    --main-submit-hover-color: #EFA249;
+    --main-submit-hover-color: #DCD8D6;
     --main-submit-border-color: #EFA249;
-    --main-contact-form-message-color: #EFA249;
+    --main-contact-form-message-color: #DCD8D6;
     --main-about-me-color: #6B5A52;
-    --main-about-me-text-color: #FFF;
+    --main-about-me-text-color: #E8D29C;
     --main-nav-color: #6B5A52;
     --main-nav-links-color: #000;
     --main-hamburger-color: #EFA249;
-    --main-logo-color: #EFA249;
-    --main-nav-links-hover-color: #EFA249;
-    --main-operating-hours-border: #EFA249;
-    --main-footer-text-color: #EFA249;
-    --main-horizontal-line-color: #EFA249;
-    --main-footer-icon-color: #EFA249;
-    --main-footer-bg-color: #000;
+    --main-logo-color: #DCD8D6;
+    --main-nav-links-hover-color: #DCD8D6;
+    --main-operating-hours-border: #DCD8D6;
+    --main-footer-text-color: #DCD8D6;
+    --main-horizontal-line-color: #DCD8D6;
+    --main-footer-icon-color: #DCD8D6;
+    --main-footer-bg-color: #6B5A52;
     --main-form-container-bg-color: #6B5A52;
-    --main-hamburger-icon-bg-color: #000;
+    --main-hamburger-icon-bg-color: #4F3928;
     --main-form-fields-color: #000;
-    --main-form-fields-border-color: #EFA249;
+    --main-form-fields-border-color: #DCD8D6;
     --main-submit-button-bg-color: #6B5A52;
-    --main-submit-button-color: #FFF;
-    --main-pageup-icon-color: #EFA249;
+    --main-submit-button-color: #DCD8D6;
+    --main-pageup-icon-color: #DCD8D6;
     --mian-mobile-nav-bg-color: #000;
     --mian-mobile-nav-bg-hover-color: #6B5A52;
-    --main-mobile-footer-border-color: #EFA249;
-    --main-mobile-nav-links-border-color: #EFA249;
-    --main-mobile-nav-links-color: #EFA249;
-    --main-box-shadow-color: #EFA249;
+    --main-mobile-footer-border-color: #DCD8D6;
+    --main-mobile-nav-links-border-color: #DCD8D6;
+    --main-mobile-nav-links-color: #DCD8D6;
+    --main-box-shadow-color: #DCD8D6;
 
 }
 
@@ -109,13 +109,13 @@ nav ul li h2 {
  .logo {
      position: absolute;
      left: 20px;
-     top: 0px;
+     top: 10px;
      z-index: 100;
      border: none;
      color: var(--main-logo-color);
  }
  .logo img {
-     height: 75px;
+     height: 50px;
      width: auto;
  }
 
@@ -139,7 +139,7 @@ nav ul li a:hover {
 .jumbotron{
     position: relative;
     background-image: url("images/jumbotron_lg.jpg");
-    height: 700px;
+    height: 600px;
     /* Create the parallax scrolling effect */
     background-attachment: fixed;
     background-position: center;
@@ -148,14 +148,16 @@ nav ul li a:hover {
 }
 
 /* The image used */
-
+.mobileJumbotronSVG {
+    display: none;
+}
 
 .jumbotronOverlay {
     position: absolute;
     top:70px;
     left:0;
     width: 100%;
-    height: 630px;
+    height: 530px;
     background-color: rgba(0,0,0,.4);
 }
 
@@ -297,13 +299,13 @@ i.fa-twitter-square {
     padding-bottom: 5px;
 }
 
-h2.servicesTitle, .projectsTitle, .aboutTitle, .contactTitle{
+.servicesTitle, .projectsTitle, .aboutTitle, .contactTitle{
     display: inline-block;
     border: 1px solid var(--main-title-color);
     border-radius: 50px;
-    -webkit-box-shadow:  2px 2px 3px var(--main-box-shadow-color);
-    -moz-box-shadow:  2px 2px 3px var(--main-box-shadow-color);
-    box-shadow:  2px 2px 3px var(--main-box-shadow-color);
+    -webkit-box-shadow:  2px 2px 0px var(--main-box-shadow-color), -2px -2px 0px var(--main-box-shadow-color);
+    -moz-box-shadow:  2px 2px 0px var(--main-box-shadow-color), -2px -2px 0px var(--main-box-shadow-color);
+    box-shadow:  2px 2px 0px var(--main-box-shadow-color), -2px -2px 0px var(--main-box-shadow-color);
     padding: 20px;
 }
 
@@ -311,6 +313,10 @@ h2.servicesTitle, .projectsTitle, .aboutTitle, .contactTitle{
     text-align: center;
     margin-bottom: 50px;
 
+}
+
+.icons img{
+    height: 50px !important;
 }
 
 #contact {
@@ -334,6 +340,7 @@ h2.servicesTitle, .projectsTitle, .aboutTitle, .contactTitle{
 }
 
 .aboutMeContainer {
+    width: 70%;
     display: flex;
     color: var(--main-about-me-text-color);
     text-shadow: 1px 1px 2px #000;
@@ -346,11 +353,20 @@ h2.servicesTitle, .projectsTitle, .aboutTitle, .contactTitle{
     -moz-border-radius:10px;
     border-radius:10px;
     margin-bottom: 100px;
+    margin-right: auto;
+    margin-left: auto;
 }
 
+
 .aboutMeContainer img {
-    border-bottom-left-radius: 10px;
-    border-top-left-radius: 10px;
+    /*border-bottom-left-radius: 10px;*/
+    /*border-top-left-radius: 10px;*/
+    /*-webkit-box-shadow: inset 4px 4px 4px #4F3928;*/
+    /*-moz-box-shadow: inset 4px 4px 4px #4F3928;*/
+    /*box-shadow: inset 4px 4px 4px #4F3928;*/
+    margin-top: 20px;
+    margin-left: 20px;
+    /*border-radius: 100%;*/
     height: 300px;
     width: auto;
 }
@@ -517,16 +533,29 @@ h2.servicesTitle, .projectsTitle, .aboutTitle, .contactTitle{
 }
 
 /* Small devices (portrait tablets and large phones, 600px and up) */
-@media only screen and (min-width: 0px) and (max-width: 992px) {
+@media only screen and (min-width: 300px) and (max-width: 992px) {
+    .imgContainer {
+        display: flex;
+        flex-direction: column;
+        padding: 20px;
+    }
+    .icons {
+        display: flex;
+    }
 
+    .mobileJumbotronSVG {
+        display: inline-block;
+    }
     .aboutMeContainer {
         flex-direction: column;
+        width: 70%;
+        margin: auto;
     }
 
     .aboutMeContainer img {
-        -webkit-box-shadow:  2px 2px 5px var(--main-box-shadow-color);
-        -moz-box-shadow:  2px 2px 5px var(--main-box-shadow-color);
-        box-shadow:  2px 2px 5px var(--main-box-shadow-color);
+        /*-webkit-box-shadow: inset 2px 2px 5px var(--main-box-shadow-color);*/
+        /*-moz-box-shadow: inset 2px 2px 5px var(--main-box-shadow-color);*/
+        /*box-shadow: inset 2px 2px 5px var(--main-box-shadow-color);*/
         -webkit-border-radius: 10px;
         -moz-border-radius: 10px;
         border-radius:10px;
@@ -624,10 +653,10 @@ h2.servicesTitle, .projectsTitle, .aboutTitle, .contactTitle{
     }
 
     .formContainer {
-        width: 300px;
-        -webkit-box-shadow:  2px 2px 5px var(--main-box-shadow-color);
-        -moz-box-shadow:  2px 2px 5px var(--main-box-shadow-color);
-        box-shadow:  2px 2px 5px var(--main-box-shadow-color);
+        /*width: 300px;*/
+        /*-webkit-box-shadow:  2px 2px 5px var(--main-box-shadow-color);*/
+        /*-moz-box-shadow:  2px 2px 5px var(--main-box-shadow-color);*/
+        /*box-shadow:  2px 2px 5px var(--main-box-shadow-color);*/
     }
     .footer {
         display: block;
@@ -652,7 +681,40 @@ h2.servicesTitle, .projectsTitle, .aboutTitle, .contactTitle{
         text-align: center;
     }
     .formContainer {
-        margin-left: -50px;
+        width: 100%;
+    }
+    .contactContainer {
+        position: relative;
+        width: 80%;
+    }
+    .jumbotronContainer {
+        position: relative;
+
+
+    }
+    .mobileJumbotronSVG {
+        margin-top: 50px;
+        margin-bottom: 0px;
+    }
+    .jumbotron{
+        background-image: none;
+        height: 400px;
+    }
+    .jumbotronOverlay {
+        height: 0px;
+
     }
 }
 
+/*@media only screen and (min-width: 0px) and (max-width: 700px) {*/
+    /*.jumbotron{*/
+        /*background-image: url("images/logo.png");*/
+        /*height: 600px;*/
+        /*!* Create the parallax scrolling effect *!*/
+        /*background-attachment: inherit;*/
+        /*background-position: inherit;*/
+        /*background-repeat: no-repeat;*/
+        /*background-size: cover;*/
+
+    /*}*/
+/*}*/

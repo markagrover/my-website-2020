@@ -13,7 +13,7 @@
 </head>
 <body>
     <header>
-        <div class="logo"><img src="images/logo.png" alt=""></div>
+        <div class="logo"><img src="images/logo.svg" alt=""></div>
         <nav>
             <ul class="hideNav navigation">
 
@@ -31,7 +31,7 @@
             </a>
         </nav>
     </header>
-    <section>
+    <section class="jumbotronContainer">
         <div class="jumbotron">
             <div class="jumbotronOverlay"></div>
 <!--            <picture>-->
@@ -48,9 +48,9 @@
         <div class="horizontalLine"></div>
         <div class="servicesContainer">
             <div class="services">
-                <h3 class="servicesTitle">
+                <h2 class="serviceTitle">
                     Web Design
-                </h3>
+                </h2>
                 <p class="servicesContent">
                     Providing Web Design Solutions to Small Businesses
                 </p>
@@ -59,9 +59,9 @@
                 </div>
             </div>
             <div class="services">
-                <h3 class="servicesTitle">
+                <h2 class="serviceTitle">
                     Web Site Updates
-                </h3>
+                </h2>
                 <p class="servicesContent">
                     Is your site outdated? We offer web site update services.
                 </p>
@@ -70,9 +70,9 @@
                 </div>
             </div>
             <div class="services">
-                <h3 class="servicesTitle">
+                <h2 class="serviceTitle">
                     SEO Optimizations
-                </h3>
+                </h2>
                 <p class="servicesContent">
                     Search Engine Optimizations. Keywords and Search terms.
                 </p>
@@ -111,7 +111,18 @@
     </div>
     <section class="about">
         <div class="aboutMeContainer">
-            <img src="images/profile.jpeg" alt="">
+            <div class="imgContainer">
+                <img src="images/profile.jpeg" alt="">
+                <div class="icons">
+                    <img src="images/icons8-html-5-50.svg" alt="html5 icon" class="html">
+                    <img src="images/icons8-javascript-50.svg" alt="javascript icon" class="javascript">
+                    <img src="images/icons8-php-logo-50.svg" alt="php icon" class="php">
+                    <img src="images/icons8-python-50.svg" alt="python icon" class="python">
+                    <img src="images/icons8-mongodb-50.svg" alt="python icon" class="mongoDB">
+                    <img src="images/icons8-mysql-logo-50.svg" alt="python icon" class="sql">
+                </div>
+            </div>
+
             <div class="aboutContent">
 
                 <p>
