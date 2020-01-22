@@ -2,6 +2,13 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta name="keywords" content="HTML,CSS,JavaScript,web designer, websites,coding,software engineer">
+    <meta name="author" content="Mark Grover">
+    <meta property="og:title" content="Experienced Web Developer">
+    <meta property="og:url" content="http://mawebdesignsolutions.com">
+    <meta property="og:type" content="website">
+    <meta property="og:description" content="Web design services. Experienced with mobile first design. We build sites that look good on all devices.">
+    <meta property="og:image" content="http://mawebdesignsolutions.com/images/jumbotron_sm.jpg">
     <title>Mark Grover Web Designer</title>
     <link rel="stylesheet" href="styles.css">
     <link href="https://fonts.googleapis.com/css?family=Raleway:500i&display=swap" rel="stylesheet">
@@ -93,13 +100,13 @@
         <div class="imagesContainer">
             <div class="websiteImage">
                 <a href="https://aquarianpoolandspa.com" target="_blank">
-                    <img src="images/aps.png" alt="Picture of Aquarian Pool and Spa Website"></a>
+                    <img src="images/rsz_1aps.png" alt="Picture of Aquarian Pool and Spa Website"></a>
             </div>
         </div>
         <div class="imagesContainer">
             <div class="websiteImage">
                 <a href="https://originalcontracting.com" target="_blank">
-                    <img src="images/original_contracting.png" alt="Picture of Original Contracting Website"></a>
+                    <img src="images/rsz_original_contracting.png" alt="Picture of Original Contracting Website"></a>
             </div>
         </div>
     </section>
@@ -126,7 +133,7 @@
             <div class="aboutContent">
 
                 <p>
-                    Hello, my name is Mark Grover and I'm a self taught Web Designer with more then 5 years Experience designing responsive web sites.
+                    Hello, my name is Mark Grover and I'm a self taught Web Designer with more then 5 years Experience designing responsive websites.
                     Programming is my passion. I have experience with <strong>WordPress</strong> and <strong>React</strong>. I also have experience programming with
                     <strong>Javascript, PHP</strong> and <strong>Python</strong>. When having your website built it's important to have your site responsive. You want to make sure your
                     site looks great no matter what the device your users may be on. I design sites that look great on mobile phones, tablets and desktop computers.
@@ -143,7 +150,7 @@
         <div class="contactMessage"></div>
         <div class="contactContainer">
             <div class="formContainer">
-                <form id="contactForm" action="formSubmit.php" method="get">
+                <form id="contactForm" action="formSubmit.php" method="get" enctype="application/x-www-form-urlencoded">
                     <div class="formSection">
     <!--                    <label class="formName" for="name">Name:</label>-->
                         <input type="text" id="name" name="name" placeholder="Name">
@@ -158,7 +165,7 @@
                     </div>
                     <div class="formSection">
     <!--                    <label class="formComment" for="comment">Comment:</label>-->
-                        <textarea id="comment" name="comment" cols="50" rows="10" placeholder="Comment"></textarea>
+                        <textarea id="comment" name="comment" cols="50" rows="10" placeholder="Comment" maxlength="300"></textarea>
                     </div>
                     <button class="formSubmit" type="submit">Submit</button>
                 </form>
@@ -194,9 +201,9 @@
             </div>
 
             <div class="socialMediaLinks">
-                <i class="fab fa-facebook-square"></i>
-                <i class="fab fa-twitter-square"></i>
-                <i class="fab fa-google-plus-square"></i>
+                <a href="https://www.facebook.com/Web-Design-Solutions-100369424855851"><i class="fab fa-facebook-square"></i></a>
+                <a href="https://twitter.com/WebDesignSolut4"><i class="fab fa-twitter-square"></i></a>
+                <a href="https://aboutme.google.com/u/2/?referer=gplus&pageId=none"><i class="fab fa-google-plus-square"></i></a>
             </div>
         </footer>
     </section>

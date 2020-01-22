@@ -1,13 +1,3 @@
-// make jumbotronOverlay the height of the image
-// function createOverlay(){
-//   const overlay = document.querySelector(".jumbotronOverlay");
-//   const imageHeight = document.querySelector('.jumbotron img').height;
-//   overlay.style = "height:" +imageHeight+"px";
-// }
-// createOverlay();
-// window.addEventListener('resize', function(){
-//   createOverlay();
-// });
 function insertSVG(){
 
   if(window.innerWidth < 1000){
@@ -167,9 +157,3 @@ $("#contactForm").submit(function(e) {
     }
   });
 });
-
-
-
-
-
-

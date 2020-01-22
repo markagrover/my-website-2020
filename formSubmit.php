@@ -14,11 +14,11 @@ $comment = htmlspecialchars($_GET['comment']);;
 $data = [$name, $email, $phone, $comment];
 
 $servername = "localhost";
-$username = "root";
-$password = "root";
+$username = "markagro_user";
+$password = "magjls2010";
 
 try {
-    $conn = new PDO("mysql:host=$servername;dbname=my_website", $username, $password);
+    $conn = new PDO("mysql:host=$servername;dbname=markagro_my-website", $username, $password);
     // set the PDO error mode to exception
     $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
     echo "Connected successfully";
@@ -38,9 +38,10 @@ $msg = $name . " Sent you a message\nTheir email is " . $email. "\nTheir Phone n
 
 // use wordwrap() if lines are longer than 70 characters
 //$msg = wordwrap($msg,70);
-$headers = 'From: webmaster@localhost.com' . "\r\n" . 'Reply-To: webmaster@localhost.com' . 'X-Mailer: PHP/' . phpversion();
+$headers = 'From: webmaster@localhost.com' . "\r\n" . 'Reply-To: markagrover85@gmail.com' . 'X-Mailer: PHP/' . phpversion();
 
 // send email
 mail("markagrover85@gmail.com","New Client Alert",$msg,$headers);
+mail($email,"Thank you for contacting us."," Someone will be in touch with you shortly. We appreciate your patience",$headers);
 
 
