@@ -35,6 +35,7 @@
     --main-mobile-nav-links-border-color: #DCD8D6;
     --main-mobile-nav-links-color: #DCD8D6;
     --main-box-shadow-color: #DCD8D6;
+		--main-char-count-color: #DCD8D6;
 }
 
 .colors {
@@ -371,6 +372,15 @@ i.fa-twitter-square {
     padding: 40px;
     text-align: left;
     background-color: var(--main-form-container-bg-color);
+}
+.textarea {
+	position: relative;
+}
+.characterCount {
+	position: absolute;
+	right: 20px;
+	bottom: 0px;
+	color: var(--main-char-count-color)
 }
 
 #name, #comment, #email, #phone {

@@ -157,3 +157,16 @@ $("#contactForm").submit(function(e) {
     }
   });
 });
+
+// decrees character count on textarea
+function textAreaCounter(){
+  var counter = document.querySelector('.characterCount');
+  var textArea = document.getElementById('comment');
+  textArea.addEventListener('keydown', function(e){
+    counter.innerText = 300 - textArea.value.length;
+  });
+}
+
+textAreaCounter();
+
+
