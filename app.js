@@ -138,7 +138,7 @@ function initMap() {
 }
 
 // stop form from submitting
-// this is the id of the form
+//this is the id of the form
 $("#contactForm").submit(function(e) {
 
   e.preventDefault(); // avoid to execute the actual submit of the form.
@@ -147,9 +147,9 @@ $("#contactForm").submit(function(e) {
   var url = form.attr('action');
 
   $.ajax({
-    type: "GET",
+    type: "get",
     url: url,
-    data: form.serialize(), // serializes the form's elements.
+    data: form.serialize(),// serializes the form's elements.
     success: function(data)
     {
       $('.contactContainer').remove();

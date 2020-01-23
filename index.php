@@ -150,7 +150,7 @@
         <div class="contactMessage"></div>
         <div class="contactContainer">
             <div class="formContainer">
-                <form id="contactForm" action="formSubmit.php" method="get" enctype="application/x-www-form-urlencoded">
+                <form id="contactForm" action="formSubmit.php" method="GET">
                     <div class="formSection">
     <!--                    <label class="formName" for="name">Name:</label>-->
                         <input type="text" id="name" name="name" placeholder="Name">

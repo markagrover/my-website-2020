@@ -2,6 +2,68 @@
 /**
  * Created by PhpStorm.
  * User: markgrover
- * Date: 1/18/20
- * Time: 6:04 PM
+ * Date: 1/22/20
+ * Time: 2:01 PM
  */
+session_start();
+if(isset($_SESSION['logged_in']) && $_SESSION['logged_in'] == true){ ?>
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <link rel="stylesheet" href="admin.css">
+        <link href="https://fonts.googleapis.com/css?family=Raleway:500i&display=swap" rel="stylesheet">
+        <script
+            src="https://code.jquery.com/jquery-3.4.1.min.js"
+            integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+            crossorigin="anonymous"></script>
+        <script src="https://kit.fontawesome.com/8bad5e6eb3.js" crossorigin="anonymous"></script>
+    </head>
+    <body>
+    <div class="logo"><img src="images/logo.svg" alt="logo"></div>
+    <nav>
+        <ul class="hideNav navigation">
+            <li><a class="indexLink" href="index.php">Home</a></li>
+            <li><a class="logoutLink" href="logout.php">Logout</a></li>
+        </ul>
+        <a href="#" class="hamburgerIcon"">
+        <i class="fa fa-bars"></i>
+        </a>
+    </nav>
+    <div class="tableContainer">
+        <table>
+            <tr>
+                <th>ID</th>
+                <th>Name</th>
+                <th>Email</th>
+                <th>Phone</th>
+                <th>Message</th>
+            </tr>
+            <?php
+            include_once 'db_connection.php';
+            $sql = "SELECT * FROM messages";
+            $result = $conn->query($sql);
+
+            if($result->rowCount() > 0){
+                foreach($result as $row){
+                    echo "<tr>";
+                    echo "<td>" . $row['id'] . "</td>";
+                    echo "<td>" . $row['name'] . "</td>";
+                    echo "<td>" . $row['email'] . "</td>";
+                    echo "<td>" . $row['phone'] . "</td>";
+                    echo "<td>" . $row['comment'] . "</td>";
+                    echo "</tr>";
+                }
+            }
+
+            ?>
+        </table>
+    </div>
+    </body>
+    <script src="admin.js"></script>
+    </html>
+<?php
+} else {
+    header("location: login.php");
+}
+?>
+

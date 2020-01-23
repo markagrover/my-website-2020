@@ -5,7 +5,8 @@
  * Date: 1/14/20
  * Time: 1:07 PM
  */
-var_dump($_GET);
+include_once 'db_connection.php';
+
 $name = htmlspecialchars($_GET['name']);;
 $email = htmlspecialchars($_GET['email']);;
 $phone = htmlspecialchars($_GET['phone']);;
@@ -13,20 +14,7 @@ $comment = htmlspecialchars($_GET['comment']);;
 
 $data = [$name, $email, $phone, $comment];
 
-$servername = "localhost";
-$username = "markagro_user";
-$password = "magjls2010";
 
-try {
-    $conn = new PDO("mysql:host=$servername;dbname=markagro_my-website", $username, $password);
-    // set the PDO error mode to exception
-    $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-    echo "Connected successfully";
-}
-catch(PDOException $e)
-{
-    echo "Connection failed: " . $e->getMessage();
-}
 
 $sql = "INSERT INTO messages (name, email, phone, comment) VALUES (?,?,?,?)";
 $stmt= $conn->prepare($sql);
