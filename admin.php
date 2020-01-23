@@ -37,6 +37,7 @@ if(isset($_SESSION['logged_in']) && $_SESSION['logged_in'] == true){ ?>
                 <th>Email</th>
                 <th>Phone</th>
                 <th>Message</th>
+                <th>Delete</th>
             </tr>
             <?php
             include_once 'db_connection.php';
@@ -45,12 +46,14 @@ if(isset($_SESSION['logged_in']) && $_SESSION['logged_in'] == true){ ?>
 
             if($result->rowCount() > 0){
                 foreach($result as $row){
+                    $id = $row['id'];
                     echo "<tr>";
                     echo "<td>" . $row['id'] . "</td>";
                     echo "<td>" . $row['name'] . "</td>";
                     echo "<td>" . $row['email'] . "</td>";
                     echo "<td>" . $row['phone'] . "</td>";
                     echo "<td>" . $row['comment'] . "</td>";
+                    echo "<td class='delete'><a class='deleteRecord' href=\"delete.php?id=$id\">X</a></td>";
                     echo "</tr>";
                 }
             }

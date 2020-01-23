@@ -1,7 +1,12 @@
+body {
+	background-color: #4F3928;
+}
+
 .loginContainer {
 	height: 100%;
 	width: 50%;
 	margin: auto;
+	margin-top: 100px;
 	padding: 10px;
 
 }
