@@ -202,7 +202,7 @@ function textAreaCounter(){
   var counter = document.querySelector('.characterCount');
   var textArea = document.getElementById('comment');
   textArea.addEventListener('keydown', function(e){
-    counter.innerText = 300 - textArea.value.length;
+    counter.innerText = 2000 - textArea.value.length;
   });
 }
 

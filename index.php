@@ -167,7 +167,7 @@
                     <div class="formSection textarea">
     <!--                    <label class="formComment" for="comment">Comment:</label>-->
                         <textarea id="comment" name="comment" cols="50" rows="10" placeholder="Comment" maxlength="300"></textarea>
-                        <div class="characterCount">300</div>
+                        <div class="characterCount">2000</div>
                     </div>
                     <button class="formSubmit" type="submit">Submit</button>
                 </form>
