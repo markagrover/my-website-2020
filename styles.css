@@ -477,7 +477,13 @@ i.fa-twitter-square {
          transform: translateY(0);
      }
  }
-
+.error {
+	border: 2px solid red !important;
+}
+.errorMessage {
+	color: red;
+	font-family:Raleway;
+}
 @keyframes fade-in {
     0% {
         opacity: 0;

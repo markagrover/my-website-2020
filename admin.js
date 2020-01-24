@@ -49,3 +49,17 @@ $(".deleteRecord").click(function(e) {
     }
   });
 });
+
+// make table responsive/ scrollable on small screens
+// function makeTableResponsive(){
+//   const tableContainer = document.querySelector('.tableContainer');
+//   if(window.innerWidth < 380){
+//     tableContainer.classList.add('table-responsive');
+//     console.log('adding class');
+//   } else if(window.innerWidth > 250){
+//     tableContainer.classList.remove('table-responsive');
+//     console.log('removing class')
+//   }
+// }
+// window.addEventListener('resize', makeTableResponsive);
+// makeTableResponsive();

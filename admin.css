@@ -95,7 +95,7 @@ nav ul li h2 {
 }
 
 .logo img {
-	margin-top: 10px;
+	margin-top: 20px;
 	height: 50px;
 	width: auto;
 }
@@ -117,15 +117,15 @@ nav ul li a:hover {
 	color: var(--main-nav-links-hover-color);
 }
 
-table {
-	border: 1px solid #4F3928;
-	margin:auto;
-	background-color: #FFF;
-}
-th ,td{
-	padding: 10px;
-	border: 2px solid #4F3928;
-}
+/*table {*/
+	/*border: 1px solid #4F3928;*/
+	/*margin:auto;*/
+	/*background-color: #FFF;*/
+/*}*/
+/*th ,td{*/
+	/*padding: 10px;*/
+	/*border: 2px solid #4F3928;*/
+/*}*/
 
 .delete {
 	text-align: center;

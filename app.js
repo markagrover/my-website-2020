@@ -137,27 +137,66 @@ function initMap() {
   var footerMarker = new google.maps.Marker({position: medway, map: footerMap});
 }
 
+//check form for empty values
+function checkFormFields(e){
+  e.preventDefault(); // avoid to execute the actual submit of the form.
+  var name = document.querySelector('#name');
+  var email = document.querySelector('#email');
+  var phone = document.querySelector('#phone');
+  var comment = document.querySelector('#comment');
+  if(name.value === ''){
+    name.classList.add('error');
+  }
+  if(email.value === ""){
+    email.classList.add('error');
+  }
+  if(phone.value === ""){
+    phone.classList.add('error');
+  }
+  if(comment.value === ""){
+    comment.classList.add('error');
+  }
+  if(name.value != '' && phone.value != '' && email.value != '' && comment.value != ''){
+
+
+    var form = $(this);
+    var url = form.attr('action');
+
+    $.ajax({
+      type: "post",
+      url: url,
+      data: form.serialize(),// serializes the form's elements.
+      success: function(data)
+      {
+        $('.contactContainer').remove();
+        $('.contactMessage').html("<p class='message'>Thank You For Contacting Me. I will be in touch shortly! </p>");
+      }
+    });
+  } else {
+    const errorMessage = document.querySelector('.errorMessage');
+    errorMessage.innerHTML = 'Please fill out all fields';
+  }
+}
 // stop form from submitting
 //this is the id of the form
-$("#contactForm").submit(function(e) {
+$("#contactForm").submit(checkFormFields);
 
-  e.preventDefault(); // avoid to execute the actual submit of the form.
+// if input is typed into remove red border
+function removeRedBorder(e){
+  e.target.classList.remove('error');
+}
 
-  var form = $(this);
-  var url = form.attr('action');
-
-  $.ajax({
-    type: "get",
-    url: url,
-    data: form.serialize(),// serializes the form's elements.
-    success: function(data)
-    {
-      $('.contactContainer').remove();
-      $('.contactMessage').html("<p class='message'>Thank You For Contacting Me. I will be in touch shortly! </p>");
-    }
-  });
-});
-
+function addEventListenersToForm(){
+  const name = document.querySelector('#name');
+  const phone = document.querySelector('#phone');
+  const email = document.querySelector('#email');
+  const comment = document.querySelector('#comment');
+  name.addEventListener('input',removeRedBorder);
+  phone.addEventListener('input',removeRedBorder);
+  email.addEventListener('input',removeRedBorder);
+  comment.addEventListener('input',removeRedBorder);
+}
+addEventListenersToForm();
 // decrees character count on textarea
 function textAreaCounter(){
   var counter = document.querySelector('.characterCount');

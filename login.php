@@ -7,16 +7,6 @@
  */
 session_start();
 include_once 'db_connection.php';
-
-
-//    foreach ($result as $row){
-//        if($row['password'] == $pass){
-//            echo '<script>window.location.href = "admin.php";</script>';
-//        } else {
-//            echo "wrong username or password";
-//        }
-//    }
-
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -32,14 +22,14 @@ include_once 'db_connection.php';
         <div class="loginContainer">
 
             <div class="loginMessage"></div>
-            <form class="loginForm" action="login.php" method="get">
+            <form class="loginForm" action="login.php" method="post">
                 <h2 class="formTitle">
                     Login
                 </h2>
                 <?php
-                if(isset($_GET['username'])) {
-                    $username = $_GET['username'];
-                    $pass = $_GET['password'];
+                if(isset($_POST['username'])) {
+                    $username = $_POST['username'];
+                    $pass = $_POST['password'];
                     $sql = "SELECT * FROM users WHERE username='$username' && password='$pass'";
                     $result = $conn->query($sql);
                     if ($result->rowCount() > 0) {
@@ -73,7 +63,7 @@ include_once 'db_connection.php';
             </form>
 
         </div>
-        <script src="login.js"></script>
+
     </body>
 </html>
 

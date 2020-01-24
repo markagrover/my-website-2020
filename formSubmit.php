@@ -7,10 +7,10 @@
  */
 include_once 'db_connection.php';
 
-$name = htmlspecialchars($_GET['name']);;
-$email = htmlspecialchars($_GET['email']);;
-$phone = htmlspecialchars($_GET['phone']);;
-$comment = htmlspecialchars($_GET['comment']);;
+$name = htmlspecialchars($_POST['name']);;
+$email = htmlspecialchars($_POST['email']);;
+$phone = htmlspecialchars($_POST['phone']);;
+$comment = htmlspecialchars($_POST['comment']);;
 
 $data = [$name, $email, $phone, $comment];
 
@@ -31,5 +31,3 @@ $headers = 'From: webmaster@localhost.com' . "\r\n" . 'Reply-To: markagrover85@g
 // send email
 mail("markagrover85@gmail.com","New Client Alert",$msg,$headers);
 mail($email,"Thank you for contacting us."," Someone will be in touch with you shortly. We appreciate your patience",$headers);
-
-

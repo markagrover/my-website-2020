@@ -150,6 +150,7 @@
         <div class="contactMessage"></div>
         <div class="contactContainer">
             <div class="formContainer">
+                <div class="errorMessage"></div>
                 <form id="contactForm" action="formSubmit.php" method="GET">
                     <div class="formSection">
     <!--                    <label class="formName" for="name">Name:</label>-->

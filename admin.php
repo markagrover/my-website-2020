@@ -17,6 +17,7 @@ if(isset($_SESSION['logged_in']) && $_SESSION['logged_in'] == true){ ?>
             integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
             crossorigin="anonymous"></script>
         <script src="https://kit.fontawesome.com/8bad5e6eb3.js" crossorigin="anonymous"></script>
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css" integrity="sha384-HSMxcRTRxnN+Bdg0JdbxYKrThecOKuH5zCYotlSAcp1+c8xmyTe9GYg1l9a69psu" crossorigin="anonymous">
     </head>
     <body>
     <div class="logo"><img src="images/logo.svg" alt="logo"></div>
@@ -30,7 +31,8 @@ if(isset($_SESSION['logged_in']) && $_SESSION['logged_in'] == true){ ?>
         </a>
     </nav>
     <div class="tableContainer">
-        <table>
+        <h2 class="tableHeading">Prospective Clients</h2>
+        <table class="table table-striped table-responsive">
             <tr>
                 <th>ID</th>
                 <th>Name</th>
@@ -53,7 +55,7 @@ if(isset($_SESSION['logged_in']) && $_SESSION['logged_in'] == true){ ?>
                     echo "<td>" . $row['email'] . "</td>";
                     echo "<td>" . $row['phone'] . "</td>";
                     echo "<td>" . $row['comment'] . "</td>";
-                    echo "<td class='delete'><a class='deleteRecord' href=\"delete.php?id=$id\">X</a></td>";
+                    echo "<td class='delete'><a class='deleteRecord btn btn-primary' href=\"delete.php?id=$id\">X</a></td>";
                     echo "</tr>";
                 }
             }

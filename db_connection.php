@@ -12,7 +12,7 @@ $db = 'my_website';
 //$servername = "localhost";
 //$username = "markagro_user";
 //$password = "magjls2010";
-//db = "markagro_my-website";
+//$db = "markagro_my-website";
 
 try {
     $conn = new PDO("mysql:host=$servername;dbname=$db", $username, $password);
