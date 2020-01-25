@@ -146,17 +146,41 @@ function checkFormFields(e){
   var comment = document.querySelector('#comment');
   if(name.value === ''){
     name.classList.add('error');
+    name.value = 'Not Valid Name';
+    name.addEventListener('focus', function(e){
+      e.target.value = "";
+    });
   }
   if(email.value === ""){
     email.classList.add('error');
   }
+  const emailRe = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
+  if(!emailRe.test(email.value)){
+    email.value = 'Not Valid Email';
+    email.classList.add('error');
+    email.addEventListener('focus', function(e){
+      e.target.value = "";
+    });
+  }
   if(phone.value === ""){
     phone.classList.add('error');
   }
+  const phoneRe = /^\(?([0-9]{3})\)?[-. ]?([0-9]{3})[-. ]?([0-9]{4})$/;
+  if(!phoneRe.test(phone.value)){
+    phone.value = 'Not Valid Phone';
+    phone.classList.add('error');
+    phone.addEventListener('focus', function(e){
+      e.target.value = "";
+    });
+  }
   if(comment.value === ""){
     comment.classList.add('error');
+    comment.value = 'Not Valid Message';
+    comment.addEventListener('focus', function(e){
+      e.target.value = "";
+    });
   }
-  if(name.value != '' && phone.value != '' && email.value != '' && comment.value != ''){
+  if(name.value != '' && phone.value != '' && email.value != '' && comment.value != '' && !name.classList.contains('error') && !email.classList.contains('error') && !phone.classList.contains('error') && !comment.classList.contains('error')){
 
 
     var form = $(this);

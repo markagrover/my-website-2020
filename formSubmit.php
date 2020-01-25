@@ -45,7 +45,7 @@ if($isValid){
 
 // use wordwrap() if lines are longer than 70 characters
 //$msg = wordwrap($msg,70);
-    $headers = 'From: webmaster@localhost.com' . "\r\n" . 'Reply-To: markagrover85@gmail.com' . 'X-Mailer: PHP/' . phpversion();
+    $headers = 'From: markagrover@mawebdesignsolutions.com' . "\r\n" . 'Reply-To:' . $email;
 
 // send email
     mail("markagrover85@gmail.com","New Client Alert",$msg,$headers);
