@@ -9,6 +9,7 @@
     <meta property="og:type" content="website">
     <meta property="og:description" content="Web design services. Experienced with mobile first design. We build sites that look good on all devices.">
     <meta property="og:image" content="http://mawebdesignsolutions.com/images/jumbotron_sm.jpg">
+    <meta name="google-site-verification" content="MmiN-EjOBOwCmHTkmFg2TF28qF62gVzGpLDitBztr4Y" />
     <title>Mark Grover Web Designer</title>
     <link rel="stylesheet" href="styles.css">
     <link href="https://fonts.googleapis.com/css?family=Raleway:500i&display=swap" rel="stylesheet">
@@ -151,7 +152,7 @@
         <div class="contactContainer">
             <div class="formContainer">
                 <div class="errorMessage"></div>
-                <form id="contactForm" action="formSubmit.php" method="GET">
+                <form id="contactForm" action="formSubmit.php" method="POST">
                     <div class="formSection">
     <!--                    <label class="formName" for="name">Name:</label>-->
                         <input type="text" id="name" name="name" placeholder="Name">
