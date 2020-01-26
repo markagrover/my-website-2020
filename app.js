@@ -144,9 +144,11 @@ function checkFormFields(e){
   var email = document.querySelector('#email');
   var phone = document.querySelector('#phone');
   var comment = document.querySelector('#comment');
+  //check if form field is empty
   if(name.value === ''){
     name.classList.add('error');
     name.value = 'Not Valid Name';
+    // add event Listener to clear error from form on focus
     name.addEventListener('focus', function(e){
       e.target.value = "";
     });
@@ -180,9 +182,10 @@ function checkFormFields(e){
       e.target.value = "";
     });
   }
-  if(name.value != '' && phone.value != '' && email.value != '' && comment.value != '' && !name.classList.contains('error') && !email.classList.contains('error') && !phone.classList.contains('error') && !comment.classList.contains('error')){
-
-
+  if(name.value != '' && phone.value != '' && email.value != '' && comment.value != '' &&
+    !name.classList.contains('error') && !email.classList.contains('error') && !phone.classList.contains('error') &&
+    !comment.classList.contains('error')){
+    // form passes all test submit form
     var form = $(this);
     var url = form.attr('action');
 

@@ -1,0 +1,53 @@
+.colors {
+	color: #E8D29C;
+	color: #4F3928;
+	color: #6B5A52;
+	color: #EFA249;
+	color: #DCD8D6;
+}
+body {
+	background-color: #4F3928;
+}
+
+.blogTitle {
+	color: #EFA249;
+	font-family: Raleway;
+}
+label {
+	color: white;
+	text-shadow: 2px 2px 3px #000;
+}
+
+.formContainer {
+	width: 80%;
+	margin: auto;
+}
+
+.imgInput {
+	margin-top: 20px;
+	margin-bottom: 20px;
+}
+
+.blogTitle {
+	text-align: center;
+}
+
+.imageUpload {
+	width: 80%;
+	margin: 20px auto;
+	color: white;
+}
+
+.image-btn {
+	margin: 20px auto;
+}
+
+.imageLocation {
+	text-align: center;
+	color: white;
+}
+.errorMessage {
+	text-align: center;
+
+
+}

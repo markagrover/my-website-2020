@@ -155,15 +155,15 @@
                 <form id="contactForm" action="formSubmit.php" method="POST">
                     <div class="formSection">
     <!--                    <label class="formName" for="name">Name:</label>-->
-                        <input type="text" id="name" name="name" placeholder="Name">
+                        <input type="text" id="name" name="name" placeholder="Name" autocomplete="given-name family-name">
                     </div>
                     <div class="formSection">
     <!--                    <label class="formEmail" for="email">Email:</label>-->
-                        <input type="email" id="email" name="email" placeholder="Email">
+                        <input type="email" id="email" name="email" placeholder="Email" autocomplete="email">
                     </div>
                     <div class="formSection">
     <!--                    <label class="formPhone" for="phone">Phone:</label>-->
-                        <input type="tel" id="phone" name="phone" placeholder="Phone">
+                        <input type="tel" id="phone" name="phone" placeholder="Phone" autocomplete="tel-national">
                     </div>
                     <div class="formSection textarea">
     <!--                    <label class="formComment" for="comment">Comment:</label>-->
