@@ -25,7 +25,7 @@ if(isset($_SESSION['logged_in']) && $_SESSION['logged_in'] == true){ ?>
         <ul class="hideNav navigation">
             <li><a class="indexLink" href="index.php">Home</a></li>
             <li><a class="logoutLink" href="logout.php">Logout</a></li>
-            <li><a class="blogLink" href="blog.php">Blog</a></li>
+            <li><a class="blogLink" href="blog.php">Blog Post</a></li>
         </ul>
         <a href="#" class="hamburgerIcon"">
         <i class="fa fa-bars"></i>

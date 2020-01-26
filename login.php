@@ -27,7 +27,6 @@ include_once 'db_connection.php';
                     Login
                 </h2>
                 <?php
-                var_dump($_POST);
                 if(isset($_POST['username'])) {
 
 

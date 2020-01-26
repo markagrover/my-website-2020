@@ -1,3 +1,7 @@
+<?php
+//    include_once 'db_connection.php';
+    include_once 'functions.php';
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -29,6 +33,7 @@
                 <li class="aboutLink"><a href="#">About</a></li>
                 <li class="servicesLink"><a href="#">Services</a></li>
                 <li class="projectsLink"><a href="#">Projects</a></li>
+                <li class="blogPostsLink"><a href="#">Blog Articles</a></li>
                 <li class="contactLink"><a href="#">Contact</a></li>
             </ul>
             <a href="#" class="hamburgerIcon"">
@@ -110,6 +115,17 @@
                     <img src="images/rsz_original_contracting.png" alt="Picture of Original Contracting Website"></a>
             </div>
         </div>
+    </section>
+    <section class="postContainer">
+        <div class="horizontalLine"></div>
+        <h2 id="blogPost" class="title blogTitle">Articles</h2>
+        <div class="horizontalLine"></div>
+        <div class="blogPostContainer">
+            <?php
+                getBlogPosts(4);
+            ?>
+        </div>
+        <a href="articles.php"><button class="viewPosts">View All Blog Posts</button></a>
     </section>
     <div class="aboutContainer">
         <div class="horizontalLine"></div>

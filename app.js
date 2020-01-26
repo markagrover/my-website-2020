@@ -59,6 +59,7 @@ function titleFlip(target){
 }
 window.addEventListener('scroll', function(e){
 
+  titleFlip('.blogTitle');
   titleFlip('.servicesTitle');
   titleFlip('.projectsTitle');
   titleFlip('.aboutTitle');
@@ -121,6 +122,12 @@ projectsLink.addEventListener('click', function(){
 var contactLink = document.querySelector(".contactLink");
 contactLink.addEventListener('click', function(){
    smoothScroll('#contact', 1500);
+});
+
+var blogLink = document.querySelector(".blogPostsLink");
+blogLink.addEventListener('click', function(){
+  console.log('clicked');
+  smoothScroll('#blogPost', 1500);
 });
 
 // google map

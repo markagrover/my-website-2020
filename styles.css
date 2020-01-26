@@ -38,13 +38,7 @@
 		--main-char-count-color: #DCD8D6;
 }
 
-.colors {
-    color: #E8D29C;
-    color: #4F3928;
-    color: #6B5A52;
-    color: #EFA249;
-    color: #DCD8D6;
-}
+
 
 * {
     box-sizing: border-box;
@@ -281,7 +275,7 @@ i.fa-twitter-square {
     padding-bottom: 5px;
 }
 
-.servicesTitle, .projectsTitle, .aboutTitle, .contactTitle{
+.servicesTitle, .projectsTitle, .aboutTitle, .contactTitle, .blogTitle{
     display: inline-block;
     border: 1px solid var(--main-title-color);
     border-radius: 50px;
@@ -289,6 +283,11 @@ i.fa-twitter-square {
     -moz-box-shadow:  2px 2px 0px var(--main-box-shadow-color), -2px -2px 0px var(--main-box-shadow-color);
     box-shadow:  2px 2px 0px var(--main-box-shadow-color), -2px -2px 0px var(--main-box-shadow-color);
     padding: 20px;
+}
+
+.blogPostContainer {
+    text-align: center;
+    margin-bottom: 50px;
 }
 
 .aboutContainer {
@@ -466,7 +465,83 @@ i.fa-twitter-square {
 .message {
     animation: slide-up 0.4s ease;
 }
+.articleLink {
+    text-decoration: none;
+    display: block;
+    width: 50%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 30px;
+    margin-bottom: 50px;
+}
 
+.postContainer {
+    text-align: center;
+}
+.blogPostContainer {
+    position: relative;
+    width: 100%;
+    margin: auto;
+    padding: 10px;
+}
+.blogArticle {
+    cursor: pointer;
+    margin: 50px auto;
+    position: relative;
+    /*display: inline-block;*/
+    padding: 20px;
+    width: 50%;
+
+
+}
+
+.blogContent {
+    background-color: #4F3928;
+    padding: 20px;
+    border-bottom: 2px solid #6B5A52;
+    border-left: 2px solid #6B5A52;
+    border-right: 2px solid #6B5A52;
+}
+
+.blogContainer {
+    background-color: #6B5A52;
+    border: 2px solid #6B5A52;
+}
+
+.blogPostTitle {
+    font-family:Raleway;
+    text-shadow: 2px 2px 3px black;
+    font-size: 1.5em;
+    margin-top: 30px;
+    color: #FFF;
+}
+
+.blogExcerpt {
+    font-family:Raleway;
+    text-shadow: 2px 2px 3px black;
+    margin-top: 20px;
+    color: #FFF;
+    text-align: left;
+}
+
+.blogImage {
+    width: 100%;
+}
+
+.viewPosts {
+    height: 50px;
+    width: 250px;
+    font-size: 1.5em;
+    padding: 10px;
+    font-family:Raleway;
+    margin-bottom: 100px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border-radius:5px;
+    background-color: #6B5A52;
+    color: #EFA249;
+    border: 2px solid #EFA249 !important;
+}
 @keyframes slide-up {
      0% {
          opacity: 0;
