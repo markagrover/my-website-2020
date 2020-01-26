@@ -22,12 +22,15 @@ include_once 'db_connection.php';
         <div class="loginContainer">
 
             <div class="loginMessage"></div>
-            <form class="loginForm" action="login.php" method="post">
+            <form class="loginForm" action="#" method="post">
                 <h2 class="formTitle">
                     Login
                 </h2>
                 <?php
+                var_dump($_POST);
                 if(isset($_POST['username'])) {
+
+
                     $username = $_POST['username'];
                     $pass = $_POST['password'];
                     $sql = "SELECT * FROM users WHERE username='$username' && password='$pass'";

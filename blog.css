@@ -26,6 +26,68 @@ label {
 .imgInput {
 	margin-top: 20px;
 	margin-bottom: 20px;
+	color: white;
+}
+.inlineImageForm {
+	background-color: rgba(255, 255, 255, 0.05);
+	margin-bottom: 20px;
+	padding: 30px;
+	-webkit-border-radius:10px;
+	-moz-border-radius:10px;
+	border-radius:10px;
+}
+
+.imageFiles {
+	float: right;
+	overflow-y:auto;
+	position: relative;
+	background-color: #6B5A52;
+	border-radius: 10px;
+	padding: 10px;
+	height: 125px;
+	width: 400px;
+}
+.thumbnail {
+	float: right;
+}
+.imageFilesTitle {
+	text-align: right;
+	text-shadow: 2px 2px 3px black;
+}
+
+.subTitle {
+	text-align: right;
+	text-shadow: 2px 2px 3px black;
+}
+
+.fileName {
+	/*color: white;*/
+	height: 100px;
+	cursor: pointer;
+	-webkit-border-radius: 5px;
+	-moz-border-radius: 5px;
+	border-radius: 5px;
+	font-family: Raleway;
+	text-shadow: 2px 2px 3px black;
+	padding: 20px 10px 0px 10px;
+}
+
+.fileName:hover {
+	background-color: #4F3928;
+}
+
+.blogPostForm {
+	position: relative;
+	background-color: rgba(255, 255, 255, 0.05);
+	margin-bottom: 100px;
+	padding: 30px;
+	-webkit-border-radius:10px;
+	-moz-border-radius:10px;
+	border-radius:10px;
+}
+
+label[for='imageToUpload'] {
+	margin-top: 50px;
 }
 
 .blogTitle {
@@ -33,6 +95,7 @@ label {
 }
 
 .imageUpload {
+	/*display: block;*/
 	width: 80%;
 	margin: 20px auto;
 	color: white;
@@ -48,6 +111,31 @@ label {
 }
 .errorMessage {
 	text-align: center;
+}
 
+.btn {
+	font-size: 20px;
+	font-family: Raleway;
+}
 
+.postSubmit {
+	position: absolute;
+	border: 3px solid #4F3928 !important;
+	background-color: #EFA249;
+	font-size: 20px;
+	right: 20px;
+	bottom: 20px;
+	font-family: Raleway;
+	color: #4F3928;
+	height: 140px;
+	border-radius: 50%;
+
+}
+
+.postSubmit:hover {
+	background-color: #4F3928;
+	color: #EFA249;
+	border: 3px solid #EFA249 !important;
+	transition: color 1s ease;
+	transition: background-color 1s ease;
 }
