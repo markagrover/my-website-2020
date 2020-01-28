@@ -49,15 +49,15 @@ body {
 	background-color: #4F3928;
 }
 
-header {
-	position: relative;
-	padding: 0px;
+/*header {*/
+	/*position: relative;*/
+	/*padding: 0px;*/
 
-}
+/*}*/
 
 nav {
 	position: relative;
-	float: left;
+	/*float: left;*/
 	width: 100%;
 	padding: 1px;
 	background-color: var(--main-nav-color);
@@ -93,7 +93,7 @@ nav ul li h2 {
 .logo {
 	position: absolute;
 	left: 20px;
-	top: 10px;
+	top: 20px;
 	z-index: 100;
 	border: none;
 	color: var(--main-logo-color);
@@ -121,134 +121,110 @@ nav ul li a:hover {
 	color: var(--main-nav-links-hover-color);
 }
 
-.blogTitle {
-	color: #EFA249;
-	font-family: Raleway;
-}
-label {
-	color: white;
-	text-shadow: 2px 2px 3px #000;
+body {
+	background-color: #4F3928;
 }
 
-.formContainer {
-	width: 80%;
+.loginContainer {
+	height: 100%;
+	width: 50%;
 	margin: auto;
-}
+	margin-top: 100px;
+	padding: 10px;
 
-.imgInput {
-	margin-top: 20px;
-	margin-bottom: 20px;
-	color: white;
 }
-.inlineImageForm {
-	background-color: rgba(255, 255, 255, 0.05);
-	margin-bottom: 20px;
-	padding: 30px;
-	-webkit-border-radius:10px;
-	-moz-border-radius:10px;
-	border-radius:10px;
+.formTitle {
+	color: #EFA249;
 }
-
-.imageFiles {
-	float: right;
-	overflow-y:auto;
+form {
 	position: relative;
 	background-color: #6B5A52;
 	border-radius: 10px;
-	padding: 10px;
-	height: 125px;
-	width: 400px;
-}
-.thumbnail {
-	float: right;
-}
-.imageFilesTitle {
-	text-align: right;
-	text-shadow: 2px 2px 3px black;
+	padding: 20px;
 }
 
-.subTitle {
-	text-align: right;
-	text-shadow: 2px 2px 3px black;
+.inputGroup {
+	width: 100%;
+	margin-top: 20px;
 }
 
-.fileName {
-	/*color: white;*/
-	height: 100px;
-	cursor: pointer;
+input {
+	width: 100%;
+	height: 50px;
+	border: 1px solid #4F3928;
+}
+
+button {
+	width: 100%;
+	height: 50px;
+	background-color: #4F3928;
 	-webkit-border-radius: 5px;
 	-moz-border-radius: 5px;
 	border-radius: 5px;
-	font-family: Raleway;
-	text-shadow: 2px 2px 3px black;
-	padding: 20px 10px 0px 10px;
-}
-
-.fileName:hover {
-	background-color: #4F3928;
-}
-
-.blogPostForm {
-	position: relative;
-	background-color: rgba(255, 255, 255, 0.05);
-	margin-bottom: 100px;
-	padding: 30px;
-	-webkit-border-radius:10px;
-	-moz-border-radius:10px;
-	border-radius:10px;
-}
-
-label[for='imageToUpload'] {
-	margin-top: 50px;
-}
-
-.blogTitle {
-	text-align: center;
-}
-
-.imageUpload {
-	/*display: block;*/
-	width: 80%;
-	margin: 20px auto;
-	color: white;
-}
-
-.image-btn {
-	margin: 20px auto;
-}
-
-.imageLocation {
-	text-align: center;
-	color: white;
-}
-.errorMessage {
-	text-align: center;
-	color: white;
-}
-
-.btn {
-	font-size: 20px;
-	font-family: Raleway;
-}
-
-.postSubmit {
-	position: absolute;
-	border: 3px solid #4F3928 !important;
-	background-color: #EFA249;
-	font-size: 20px;
-	right: 20px;
-	bottom: 20px;
-	font-family: Raleway;
-	color: #4F3928;
-	height: 140px;
-	border-radius: 50%;
-
-}
-
-.postSubmit:hover {
-	background-color: #4F3928;
 	color: #EFA249;
-	border: 3px solid #EFA249 !important;
-	transition: color 1s ease;
-	transition: background-color 1s ease;
+}
+
+.loginMessage {
+	text-align: center;
+	font-size: 2em;
+	color: #EFA249;
+}
+
+.warning {
+	color: red;
+	text-align: center;
+}
+
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (min-width: 300px) and (max-width: 992px) {
+	.hamburgerIcon:first-child {
+		margin-top: 0px;
+	}
+
+	.hamburgerIcon {
+		margin-top: 5px;
+		display: block;
+		padding: 5px;
+		background-color: var(--main-hamburger-icon-bg-color);
+		border-radius: 5px;
+	}
+
+	.hamburgerIcon i {
+		font-size: 50px;
+	}
+
+	nav ul{
+		position: relative;
+		display: block;
+		overflow: hidden;
+		background-color: var(--mian-mobile-nav-bg-color);
+		margin-top: 60px;
+		padding: 0px;
+		width: 100%;
+		text-align: center;
+	}
+
+	.hideNav {
+		display: none;
+		opacity: 0;
+	}
+
+	.showNav {
+		display: block;
+		right: 0;
+		animation: slide-down 0.4s ease;
+	}
+
+	nav ul li a {
+		display: inline-block;
+		width: 100%;
+		font-size: 1.5em;
+		border-top: 1px solid var(--main-mobile-nav-links-border-color);
+		color: var(--main-mobile-nav-links-color);
+	}
+
+	nav ul li a:hover {
+		background-color: var(--mian-mobile-nav-bg-hover-color);
+	}
+
 }

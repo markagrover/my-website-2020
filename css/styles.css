@@ -130,7 +130,7 @@ nav ul li a:hover {
 
 .jumbotron{
     position: relative;
-    background-image: url("images/jumbotron_lg.jpg");
+    background-image: url("../images/jumbotron_lg.jpg");
     height: 600px;
     /* Create the parallax scrolling effect */
     background-attachment: fixed;
@@ -469,6 +469,9 @@ i.fa-twitter-square {
     text-decoration: none;
     display: block;
     width: 50%;
+    border-right: 4px solid #6B5A52;
+    border-top: 4px solid #6B5A52;
+    border-left: 4px solid #6B5A52;
     margin-left: auto;
     margin-right: auto;
     margin-top: 30px;
@@ -484,9 +487,10 @@ i.fa-twitter-square {
     margin: auto;
     padding: 10px;
 }
+
 .blogArticle {
     cursor: pointer;
-    margin: 50px auto;
+    /*margin: 50px auto;*/
     position: relative;
     /*display: inline-block;*/
     padding: 20px;
@@ -513,7 +517,8 @@ i.fa-twitter-square {
     text-shadow: 2px 2px 3px black;
     font-size: 1.5em;
     margin-top: 30px;
-    color: #FFF;
+    color: #EFA249;
+    padding: 5px;
 }
 
 .blogExcerpt {

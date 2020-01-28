@@ -45,7 +45,7 @@ $(".deleteRecord").click(function(e) {
     // data: form.serialize(),// serializes the form's elements.
     success: function(data)
     {
-      window.location.href = "admin.php";
+      window.location.href = "../admin.php";
     }
   });
 });

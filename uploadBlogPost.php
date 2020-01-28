@@ -54,12 +54,13 @@ if(isset($_POST['title'])){
     $imageLocation = $target_dir . basename($_FILES['imageToUpload']['name']);
     $body = $_POST['body'];;
     $excerpt = truncate(strip_tags($body));
-    $title = htmlspecialchars($_POST['title']);;
+    $title = htmlspecialchars($_POST['title']);
+    $date = date("Y/m/d");
 
 
-    $data = [$imageLocation, $title, $body, $excerpt];
+    $data = [$imageLocation, $title, $body, $excerpt, $date];
     try {
-        $sql = "INSERT INTO post (img, title, body, excerpt) VALUES (?,?,?,?)";
+        $sql = "INSERT INTO post (img, title, body, excerpt, date) VALUES (?,?,?,?,?)";
         $stmt= $conn->prepare($sql);
         $stmt->execute($data);
     } catch (Exception $e) {

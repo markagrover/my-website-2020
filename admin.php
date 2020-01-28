@@ -10,7 +10,7 @@ if(isset($_SESSION['logged_in']) && $_SESSION['logged_in'] == true){ ?>
     <!DOCTYPE html>
     <html lang="en">
     <head>
-        <link rel="stylesheet" href="admin.css">
+        <link rel="stylesheet" href="css/admin.css">
         <link href="https://fonts.googleapis.com/css?family=Raleway:500i&display=swap" rel="stylesheet">
         <script
             src="https://code.jquery.com/jquery-3.4.1.min.js"
@@ -65,7 +65,8 @@ if(isset($_SESSION['logged_in']) && $_SESSION['logged_in'] == true){ ?>
         </table>
     </div>
     </body>
-    <script src="admin.js"></script>
+    <script src="js/admin.js"></script>
+    <script type="text/javascript" src="js/toggleMobileNav.js"></script>
     </html>
 <?php
 } else {

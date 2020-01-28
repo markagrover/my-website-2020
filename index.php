@@ -15,7 +15,7 @@
     <meta property="og:image" content="http://mawebdesignsolutions.com/images/jumbotron_sm.jpg">
     <meta name="google-site-verification" content="MmiN-EjOBOwCmHTkmFg2TF28qF62gVzGpLDitBztr4Y" />
     <title>Mark Grover Web Designer</title>
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="css/styles.css">
     <link href="https://fonts.googleapis.com/css?family=Raleway:500i&display=swap" rel="stylesheet">
     <script
         src="https://code.jquery.com/jquery-3.4.1.min.js"
@@ -117,15 +117,10 @@
         </div>
     </section>
     <section class="postContainer">
-        <div class="horizontalLine"></div>
-        <h2 id="blogPost" class="title blogTitle">Articles</h2>
-        <div class="horizontalLine"></div>
-        <div class="blogPostContainer">
             <?php
                 getBlogPosts(4);
             ?>
         </div>
-        <a href="articles.php"><button class="viewPosts">View All Blog Posts</button></a>
     </section>
     <div class="aboutContainer">
         <div class="horizontalLine"></div>
@@ -230,7 +225,7 @@
     <div class="pageUp">
         <i class="fas fa-chevron-circle-up"></i>
     </div>
-    <script src="app.js"></script>
+    <script src="js/app.js"></script>
     <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAOUsur6ANosEbusDxD2w7CPMEtI1RVDdk&callback=initMap"></script>
 </body>
 </html>
