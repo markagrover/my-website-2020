@@ -89,7 +89,7 @@ if(isset($_SESSION['logged_in']) && $_SESSION['logged_in'] == true){ ?>
             </form>
         </div>
         <script src="js/blog.js"></script>
-        <script type="text/javascript" src="toggleMobileNav.js"></script>
+        <script type="text/javascript" src="js/toggleMobileNav.js"></script>
         <script type="text/javascript" src="rich_text_editor/src/jquery.richtext.js"></script>
         <script>
             $('.content').richText();

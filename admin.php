@@ -10,7 +10,6 @@ if(isset($_SESSION['logged_in']) && $_SESSION['logged_in'] == true){ ?>
     <!DOCTYPE html>
     <html lang="en">
     <head>
-        <link rel="stylesheet" href="css/admin.css">
         <link href="https://fonts.googleapis.com/css?family=Raleway:500i&display=swap" rel="stylesheet">
         <script
             src="https://code.jquery.com/jquery-3.4.1.min.js"
@@ -18,19 +17,24 @@ if(isset($_SESSION['logged_in']) && $_SESSION['logged_in'] == true){ ?>
             crossorigin="anonymous"></script>
         <script src="https://kit.fontawesome.com/8bad5e6eb3.js" crossorigin="anonymous"></script>
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css" integrity="sha384-HSMxcRTRxnN+Bdg0JdbxYKrThecOKuH5zCYotlSAcp1+c8xmyTe9GYg1l9a69psu" crossorigin="anonymous">
+        <link rel="stylesheet" href="css/admin.css">
     </head>
     <body>
-    <div class="logo"><img src="images/logo.svg" alt="logo"></div>
-    <nav>
-        <ul class="hideNav navigation">
-            <li><a class="indexLink" href="index.php">Home</a></li>
-            <li><a class="logoutLink" href="logout.php">Logout</a></li>
-            <li><a class="blogLink" href="blog.php">Blog Post</a></li>
-        </ul>
-        <a href="#" class="hamburgerIcon"">
-        <i class="fa fa-bars"></i>
-        </a>
-    </nav>
+    <header>
+        <div class="logo"><img src="images/logo.svg" alt="logo"></div>
+
+        <nav>
+            <ul class="hideNav navigation">
+                <li><a class="indexLink" href="index.php">Home</a></li>
+                <li><a class="logoutLink" href="logout.php">Logout</a></li>
+                <li><a class="blogLink" href="blog.php">Blog Post</a></li>
+            </ul>
+            <a href="#" class="hamburgerIcon"">
+            <i class="fa fa-bars"></i>
+            </a>
+        </nav>
+    </header>
+
     <div class="tableContainer">
         <h2 class="tableHeading">Prospective Clients</h2>
         <table class="table table-striped table-responsive">
@@ -66,7 +70,7 @@ if(isset($_SESSION['logged_in']) && $_SESSION['logged_in'] == true){ ?>
     </div>
     </body>
     <script src="js/admin.js"></script>
-    <script type="text/javascript" src="js/toggleMobileNav.js"></script>
+<!--    <script type="text/javascript" src="js/toggleMobileNav.js"></script>-->
     </html>
 <?php
 } else {

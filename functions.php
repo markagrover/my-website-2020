@@ -68,6 +68,11 @@ function getBlogPost(){
 
             echo '<div class="blogArticle">';
             echo '<h1 class="blogPostTitle">'. $row['title'] .'</h1>';
+            if(isset($_SESSION['logged_in']) && $_SESSION['logged_in'] == true){
+                echo '<a href="edit_blog.php?id='. $row['id']. '"><i class="far fa-edit"></i></a>';
+            }
+
+
             echo '<p class="blogPostDate">Published on '. $row['date'] .'</p>';
             echo '<div class="blogContainer">';
             echo '<img class="blogImage" src="'. $row['img'] .'"/>';

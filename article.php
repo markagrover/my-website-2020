@@ -5,6 +5,7 @@
  * Date: 1/26/20
  * Time: 11:37 AM
  */
+session_start();
 include_once 'functions.php';
 ?>
 <!DOCTYPE html>
@@ -25,7 +26,6 @@ include_once 'functions.php';
             <ul class="hideNav navigation">
 
                 <li><a class="indexLink" href="index.php">Home</a></li>
-                <li class="blogPostsLink"><a href="articles.php">Blog Articles</a></li>
             </ul>
             <a href="#" class="hamburgerIcon"">
             <!--                <span class="bar"></span>-->

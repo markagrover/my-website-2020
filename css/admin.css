@@ -142,6 +142,17 @@ nav ul li a:hover {
 		border-radius: 5px;
 	}
 
+	.hamburgerIcon:hover {
+		background-color: var(--main-hamburger-icon-bg-color);
+		color: var(--main-hamburger-color);
+	}
+
+	.hamburgerIcon:visited {
+		background-color: var(--main-hamburger-icon-bg-color);
+		color: var(--main-hamburger-color);
+	}
+
+
 	.hamburgerIcon i {
 		font-size: 50px;
 	}
