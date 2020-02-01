@@ -31,7 +31,7 @@ if(isset($_SESSION['logged_in']) && $_SESSION['logged_in'] == true){ ?>
                 <ul class="hideNav navigation">
 
                     <li><a class="indexLink" href="index.php">Home</a></li>
-                    <li class="blogLink"><a href="blog_post.php">Blog</a></li>
+                    <li class="blogLink"><a href="articles.php">Blog</a></li>
                     <li class="adminLink"><a href="admin.php">Admin</a></li>
                     <li class="logoutLink"><a href="logout.php">Logout</a></li>
                 </ul>

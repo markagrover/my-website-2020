@@ -30,9 +30,6 @@ include_once 'functions.php';
                 <li><a class="indexLink" href="index.php">Home</a></li>
             </ul>
             <a href="#" class="hamburgerIcon"">
-            <!--                <span class="bar"></span>-->
-            <!--                <span class="bar"></span>-->
-            <!--                <span class="bar"></span>-->
             <i class="fa fa-bars"></i>
             </a>
         </nav>

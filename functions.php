@@ -44,7 +44,9 @@ function getAllBlogPosts(){
             echo '<h2 class="blogPostTitle">'. $row['title'] .'</h2>';
             echo '<p class="blogPostDate">Published On '. $row['date'] .'</p>';
             echo '<div class="blogContainer">';
-            echo '<img class="blogImage" src="'. $row['img'] .'"/>';
+            if($row['img'] != ''){
+                echo '<img class="blogImage" src="'. $row['img'] .'"/>';
+            }
             echo '<div class="blogContent">';
             echo '<div class="blogExcerpt">'. $row['excerpt'] .'</div>';
             echo '</div>';
@@ -75,7 +77,9 @@ function getBlogPost(){
 
             echo '<p class="blogPostDate">Published on '. $row['date'] .'</p>';
             echo '<div class="blogContainer">';
-            echo '<img class="blogImage" src="'. $row['img'] .'"/>';
+            if($row['img'] != ''){
+                echo '<img class="blogImage" src="'. $row['img'] .'"/>';
+            }
             echo '<div class="blogContent">';
             echo '<div class="blogBody">'. $row['body'] .'</div>';
             echo '</div>';
@@ -101,7 +105,9 @@ function getBlogPosts($limit){
             echo '<h2 class="blogPostTitle">'. $row['title'] .'</h2>';
 //            echo '<p class="blogPostDate">Published On '. $row['date'] .'</p>';
             echo '<div class="blogContainer">';
-            echo '<img class="blogImage" src="'. $row['img'] .'"/>';
+            if($row['img'] != ''){
+                echo '<img class="blogImage" src="'. $row['img'] .'"/>';
+            }
             echo '<div class="blogContent">';
 
             echo '<div class="blogExcerpt">'. $row['excerpt'] .'</div>';
