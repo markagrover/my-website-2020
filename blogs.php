@@ -26,10 +26,9 @@ if(isset($_SESSION['logged_in']) && $_SESSION['logged_in'] == true){ ?>
         <nav>
             <ul class="hideNav navigation">
                 <li><a class="indexLink" href="index.php">Home</a></li>
-                <li><a class="blogsLink" href="blogs.php">Post</a></li>
-                <li><a class="blogLink" href="blog.php">New Blog Post</a></li>
+                <li><a class="adminLink" href="admin.php">Admin</a></li>
                 <li><a class="logoutLink" href="logout.php">Logout</a></li>
-
+                <li><a class="blogLink" href="blog.php">New Blog Post</a></li>
             </ul>
             <a href="#" class="hamburgerIcon"">
             <i class="fa fa-bars"></i>
@@ -38,19 +37,19 @@ if(isset($_SESSION['logged_in']) && $_SESSION['logged_in'] == true){ ?>
     </header>
 
     <div class="tableContainer">
-        <h2 class="tableHeading">Prospective Clients</h2>
+        <h2 class="tableHeading">Blog Post</h2>
         <table class="table table-striped table-responsive">
             <tr>
                 <th>ID</th>
-                <th>Name</th>
-                <th>Email</th>
-                <th>Phone</th>
-                <th>Message</th>
+                <th>Title</th>
+                <th>Excerpt</th>
+                <th>Status</th>
                 <th>Delete</th>
+                <th>Publish</th>
             </tr>
             <?php
             include_once 'db_connection.php';
-            $sql = "SELECT * FROM messages";
+            $sql = "SELECT * FROM post";
             $result = $conn->query($sql);
 
             if($result->rowCount() > 0){
@@ -58,11 +57,20 @@ if(isset($_SESSION['logged_in']) && $_SESSION['logged_in'] == true){ ?>
                     $id = $row['id'];
                     echo "<tr>";
                     echo "<td>" . $row['id'] . "</td>";
-                    echo "<td>" . $row['name'] . "</td>";
-                    echo "<td>" . $row['email'] . "</td>";
-                    echo "<td>" . $row['phone'] . "</td>";
-                    echo "<td>" . $row['comment'] . "</td>";
-                    echo "<td class='delete'><a class='deleteRecord btn btn-primary' href=\"deleteContact.php?id=$id\">X</a></td>";
+                    echo "<td>" . $row['title'] . "</td>";
+                    echo "<td>" . $row['excerpt'] . "</td>";
+                    if($row['status'] == 0){
+                        echo "<td> Draft </td>";
+                    } else if($row['status'] == 1){
+                        echo "<td> Published </td>";
+                    }
+
+                    echo "<td class='delete'><a class='deleteRecord btn btn-primary' href=\"deletePost.php?id=$id\">X</a></td>";
+                    if($row['status'] == 0){
+                        echo "<td class='publish'><a class='publishRecord btn btn-primary' href=\"publish.php?id=$id\">Publish</a></td>";
+                    } else if($row['status'] == 1){
+                        echo "<td class='draft'><a class='draftRecord btn btn-primary' href=\"draft.php?id=$id\">Draft</a></td>";
+                    }
                     echo "</tr>";
                 }
             }
@@ -71,12 +79,11 @@ if(isset($_SESSION['logged_in']) && $_SESSION['logged_in'] == true){ ?>
         </table>
     </div>
     </body>
-    <script src="js/admin.js"></script>
-<!--    <script type="text/javascript" src="js/toggleMobileNav.js"></script>-->
+    <script src="js/blogs.js"></script>
+    <!--    <script type="text/javascript" src="js/toggleMobileNav.js"></script>-->
     </html>
-<?php
+    <?php
 } else {
     header("location: login.php");
 }
 ?>
-

@@ -26,6 +26,7 @@ include_once 'functions.php';
             <ul class="hideNav navigation">
 
                 <li><a class="indexLink" href="index.php">Home</a></li>
+                <li><a class="postLink" href="articles.php">Posts</a></li>
             </ul>
             <a href="#" class="hamburgerIcon"">
             <!--                <span class="bar"></span>-->

@@ -193,9 +193,9 @@ label {
 	background-color: rgba(255, 255, 255, 0.05);
 	margin-bottom: 100px;
 	padding: 30px;
-	-webkit-border-radius:10px;
-	-moz-border-radius:10px;
-	border-radius:10px;
+	/*-webkit-border-radius:10px;*/
+	/*-moz-border-radius:10px;*/
+	/*border-radius:10px;*/
 }
 
 label[for='imageToUpload'] {
@@ -253,6 +253,11 @@ label[for='imageToUpload'] {
 	transition: background-color 1s ease;
 }
 
+.inlineImageInputGroup {
+	display: inline-block;
+	position: relative;
+	border: 1px solid #FFF;
+}
 /* Small devices (portrait tablets and large phones, 600px and up) */
 @media only screen and (min-width: 300px) and (max-width: 992px) {
 	.hamburgerIcon:first-child {

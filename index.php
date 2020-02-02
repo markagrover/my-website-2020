@@ -28,18 +28,21 @@
         <div class="logo"><img src="images/logo.svg" alt=""></div>
         <nav>
             <ul class="hideNav navigation">
-
                 <li><a class="indexLink" href="index.php">Home</a></li>
                 <li class="aboutLink"><a href="#">About</a></li>
                 <li class="servicesLink"><a href="#">Services</a></li>
                 <li class="projectsLink"><a href="#">Projects</a></li>
-                <li class="blogPostsLink"><a href="#">Blog Articles</a></li>
+                <?php
+                    include_once 'db_connection.php';
+                    $sql = "SELECT * FROM post LIMIT 1";
+                    $result = $conn->query($sql);
+                    if($result->rowCount() > 0){
+                        echo '<li class="blogPostsLink"><a href="#">Blog Articles</a></li>';
+                    }
+                ?>
                 <li class="contactLink"><a href="#">Contact</a></li>
             </ul>
             <a href="#" class="hamburgerIcon"">
-<!--                <span class="bar"></span>-->
-<!--                <span class="bar"></span>-->
-<!--                <span class="bar"></span>-->
                 <i class="fa fa-bars"></i>
             </a>
         </nav>
@@ -47,12 +50,6 @@
     <section class="jumbotronContainer">
         <div class="jumbotron">
             <div class="jumbotronOverlay"></div>
-<!--            <picture>-->
-<!--                <source media="(max-width: 650px)" srcset="images/jumbotron_md.jpg">-->
-<!--                <source media="(max-width: 465px)" srcset="images/jumbotron_sm.jpg">-->
-<!--                <img class="jumbotronImage" src="images/jumbotron_lg.jpg" alt="Web designer picture">-->
-<!--            </picture>-->
-<!--            <img class="jumbotronImage" src="images/jumbotron_lg.jpg" alt="web designer picture">-->
         </div>
     </section>
     <section class="servicesSection">

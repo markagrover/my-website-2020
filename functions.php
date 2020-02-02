@@ -63,7 +63,7 @@ function getAllBlogPosts(){
 function getBlogPost(){
     include 'db_connection.php';
     $id = $_GET['id'];
-    $sql = "SELECT * FROM post WHERE id = $id";
+    $sql = "SELECT * FROM post WHERE id=$id";
     $result = $conn->query($sql);
     if ($result->rowCount() > 0) {
         foreach($result as $row){

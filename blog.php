@@ -35,10 +35,7 @@ if(isset($_SESSION['logged_in']) && $_SESSION['logged_in'] == true){ ?>
                     <li class="adminLink"><a href="admin.php">Admin</a></li>
                     <li class="logoutLink"><a href="logout.php">Logout</a></li>
                 </ul>
-                <a href="#" class="hamburgerIcon"">
-                <!--                <span class="bar"></span>-->
-                <!--                <span class="bar"></span>-->
-                <!--                <span class="bar"></span>-->
+                <a href="#" class="hamburgerIcon">
                 <i class="fa fa-bars"></i>
                 </a>
             </nav>

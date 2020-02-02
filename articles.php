@@ -29,7 +29,7 @@ include_once 'functions.php';
 
                 <li><a class="indexLink" href="index.php">Home</a></li>
             </ul>
-            <a href="#" class="hamburgerIcon"">
+            <a href="#" class="hamburgerIcon">
             <i class="fa fa-bars"></i>
             </a>
         </nav>

@@ -22,6 +22,7 @@ if(isset($_SESSION['logged_in']) && $_SESSION['logged_in'] == true){ ?>
     <link rel="stylesheet" href="rich_text_editor/src/richtext.min.css">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css" integrity="sha384-HSMxcRTRxnN+Bdg0JdbxYKrThecOKuH5zCYotlSAcp1+c8xmyTe9GYg1l9a69psu" crossorigin="anonymous">
     <link rel="stylesheet" href="css/blog.css">
+    <link rel="stylesheet" href="css/editBlog.css">
 
 </head>
 <body>
@@ -36,9 +37,6 @@ if(isset($_SESSION['logged_in']) && $_SESSION['logged_in'] == true){ ?>
             <li class="logoutLink"><a href="logout.php">Logout</a></li>
         </ul>
         <a href="#" class="hamburgerIcon"">
-        <!--                <span class="bar"></span>-->
-        <!--                <span class="bar"></span>-->
-        <!--                <span class="bar"></span>-->
         <i class="fa fa-bars"></i>
         </a>
     </nav>
@@ -60,10 +58,13 @@ if(isset($_SESSION['logged_in']) && $_SESSION['logged_in'] == true){ ?>
             scanFolder('blog_images');
             ?>
         </div>
-        <input type="text" name="submitImg" hidden>
-        <label for="imgUpload">Upload Image</label>
-        <input class="inlineImgInput" type="file" name="imgUpload">
-        <button class="image-btn btn btn-sm btn-primary" type="submit">Upload Image</button>
+        <div class="inlineImageInputGroup">
+            <input type="text" name="submitImg" hidden>
+            <label for="imgUpload">Upload Image</label>
+            <input class="inlineImgInput" type="file" name="imgUpload">
+            <button class="image-btn btn btn-sm btn-primary" type="submit">Upload Image</button>
+        </div>
+
     </form>
 </div>
 <div class="formContainer">
@@ -81,20 +82,61 @@ if(isset($_SESSION['logged_in']) && $_SESSION['logged_in'] == true){ ?>
     $result = $conn->query($sql);
     if($result->rowCount() > 0){
         foreach ($result as $row){
+            echo '<div class="sidebar">';
+            echo '<div class="featuredTitle">';
+            echo '<h2>Featured Image</h2>';
+            echo '</div>';
+            echo '<div class="featuredImageContainer">';
+            echo '<img class="featuredImage" src="'. $row['img'] . '"/>';
+            echo '</div>';
+            echo '<div class="recentPostTitle">';
+            echo '<h2>Recent Post</h2>';
+            echo '</div>';
+            echo '<div class="recentPost">';
+
+            echo '<div class="postContainer">';
+
+            echo '<div class="recentPostContainer">';
+            $sql = "SELECT * FROM post";
+            $result = $conn->query($sql);
+            if($result->rowCount() > 0){
+                foreach ($result as $row) {
+                    echo '<a href=article.php?id='. $row['id'] . '>';
+                    echo '<div class="post">';
+                    echo '<img class="postImg" src="'. $row['img'] .'"/>';
+                    echo '<div class="postTitle">';
+                    echo '<h4>'. $row['title'] . '</h4>';
+                    echo '</div>';
+                    echo '<div class="postExcerpt">';
+                    echo $row['excerpt'];
+                    echo '</div>';
+                    echo '<div class="postDate">';
+                    echo $row['date'];
+                    echo '</div>';
+                    echo '</div>';
+                    echo '</a>';
+                }
+
+            }
+            echo '</div>';
+            echo '</div>';
+            echo '</div>';
+            echo '</div>';
             echo '<form class="blogPostForm" action="#" method="post" enctype="multipart/form-data">';
             echo '<label for="title">Blog Title</label>';
             echo '<input value="' . $row['title'] . ' " type="text" class="blogInput form-control" name="title">';
             echo '<label for="body">Blog Content</label>';
             echo '<textarea class="form-control content" name="body" id="body" cols="30" rows="10">'. $row['body'] .'</textarea>';
-            echo '<label for="imageToUpload">Upload New Blog Image</label>';
-            echo '<input value="'. $row['img'] .'" class="imgInput" type="file" name="imageToUpload">';
+            echo '<label for="imageToUpload">Upload Featured Image</label>';
+            echo '<input class="imgInput" type="file" name="imageToUpload">';
             echo '<input value="'. $row['id'] .'" type="text" name="id" hidden>';
-
-            echo '<button class="btn-primary" type="submit">Edit Blog Post</button>';
+            echo '<button class="btn btn-primary" type="submit">Edit Blog Post</button>';
             echo '</form>';
+
         }
     }
     ?>
+
 </div>
 <script src="js/blog.js"></script>
 <script type="text/javascript" src="js/toggleMobileNav.js"></script>
