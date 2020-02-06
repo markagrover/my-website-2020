@@ -44,6 +44,7 @@ if(isset($_SESSION['logged_in']) && $_SESSION['logged_in'] == true){ ?>
                 <th>Title</th>
                 <th>Excerpt</th>
                 <th>Status</th>
+                <th>Edit Blog</th>
                 <th>Delete</th>
                 <th>Publish</th>
             </tr>
@@ -64,6 +65,7 @@ if(isset($_SESSION['logged_in']) && $_SESSION['logged_in'] == true){ ?>
                     } else if($row['status'] == 1){
                         echo "<td> Published </td>";
                     }
+                    echo "<td><a class='btn btn-primary' href='edit_blog.php?id=". $id. "'>Edit Post</a></td>";
 
                     echo "<td class='delete'><a class='deleteRecord btn btn-primary' href=\"deletePost.php?id=$id\">X</a></td>";
                     if($row['status'] == 0){

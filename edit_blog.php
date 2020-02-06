@@ -33,7 +33,8 @@ if(isset($_SESSION['logged_in']) && $_SESSION['logged_in'] == true){ ?>
 
             <li><a class="indexLink" href="index.php">Home</a></li>
             <li class="blogLink"><a href="articles.php">Blog</a></li>
-            <li class="adminLink"><a href="admin.php">Admin</a></li>
+            <li class="adminLink"><a href="admin.php">Contacts</a></li>
+            <li class="blogsLink"><a href="blogs.php">Blogs</a></li>
             <li class="logoutLink"><a href="logout.php">Logout</a></li>
         </ul>
         <a href="#" class="hamburgerIcon"">
@@ -73,68 +74,69 @@ if(isset($_SESSION['logged_in']) && $_SESSION['logged_in'] == true){ ?>
         header("location: login.php");
     }
 
-    include_once 'db_connection.php';
-
     include_once 'updateBlogPost.php';
-
-    $id = $_GET['id'];
-    $sql = "SELECT * FROM post WHERE id = $id";
-    $result = $conn->query($sql);
-    if($result->rowCount() > 0){
-        foreach ($result as $row){
-            echo '<div class="sidebar">';
-            echo '<div class="featuredTitle">';
-            echo '<h2>Featured Image</h2>';
-            echo '</div>';
-            echo '<div class="featuredImageContainer">';
-            echo '<img class="featuredImage" src="'. $row['img'] . '"/>';
-            echo '</div>';
-            echo '<div class="recentPostTitle">';
-            echo '<h2>Recent Post</h2>';
-            echo '</div>';
-            echo '<div class="recentPost">';
-
-            echo '<div class="postContainer">';
-
-            echo '<div class="recentPostContainer">';
-            $sql = "SELECT * FROM post";
-            $result = $conn->query($sql);
-            if($result->rowCount() > 0){
-                foreach ($result as $row) {
-                    echo '<a href=article.php?id='. $row['id'] . '>';
-                    echo '<div class="post">';
-                    echo '<img class="postImg" src="'. $row['img'] .'"/>';
-                    echo '<div class="postTitle">';
-                    echo '<h4>'. $row['title'] . '</h4>';
-                    echo '</div>';
-                    echo '<div class="postExcerpt">';
-                    echo $row['excerpt'];
-                    echo '</div>';
-                    echo '<div class="postDate">';
-                    echo $row['date'];
-                    echo '</div>';
-                    echo '</div>';
-                    echo '</a>';
-                }
-
-            }
-            echo '</div>';
-            echo '</div>';
-            echo '</div>';
-            echo '</div>';
-            echo '<form class="blogPostForm" action="#" method="post" enctype="multipart/form-data">';
-            echo '<label for="title">Blog Title</label>';
-            echo '<input value="' . $row['title'] . ' " type="text" class="blogInput form-control" name="title">';
-            echo '<label for="body">Blog Content</label>';
-            echo '<textarea class="form-control content" name="body" id="body" cols="30" rows="10">'. $row['body'] .'</textarea>';
-            echo '<label for="imageToUpload">Upload Featured Image</label>';
-            echo '<input class="imgInput" type="file" name="imageToUpload">';
-            echo '<input value="'. $row['id'] .'" type="text" name="id" hidden>';
-            echo '<button class="btn btn-primary" type="submit">Edit Blog Post</button>';
-            echo '</form>';
-
-        }
-    }
+    edit_post_form();
+    recent_post();
+//    $id = $_GET['id'];
+//    $sql = "SELECT * FROM post WHERE id = $id";
+//    $result = $conn->query($sql);
+//    if($result->rowCount() > 0){
+//        foreach ($result as $row){
+//            echo '<div class="sidebar">';
+//            echo '<div class="id">'. $id .'</div>';
+//
+//            echo '<div class="featuredTitle">';
+//            echo '<h2>Featured Image</h2>';
+//            echo '</div>';
+//            echo '<div class="featuredImageContainer">';
+//            echo '<img class="featuredImage" src="'. $row['img'] . '"/>';
+//            echo '</div>';
+//            echo '<div class="recentPostTitle">';
+//            echo '<h2>Recent Post</h2>';
+//            echo '</div>';
+//            echo '<div class="recentPost">';
+//
+//            echo '<div class="postContainer">';
+//
+//            echo '<div class="recentPostContainer">';
+//            $sql = "SELECT * FROM post";
+//            $result = $conn->query($sql);
+//            if($result->rowCount() > 0){
+//                foreach ($result as $row) {
+//                    echo '<a href=article.php?id='. $row['id'] . '>';
+//                    echo '<div class="post">';
+//                    echo '<img class="postImg" src="'. $row['img'] .'"/>';
+//                    echo '<div class="postTitle">';
+//                    echo '<h4>'. $row['title'] . '</h4>';
+//                    echo '</div>';
+//                    echo '<div class="postExcerpt">';
+//                    echo $row['excerpt'];
+//                    echo '</div>';
+//                    echo '<div class="postDate">';
+//                    echo $row['date'];
+//                    echo '</div>';
+//                    echo '</div>';
+//                    echo '</a>';
+//                }
+//
+//            }
+//            echo '</div>';
+//            echo '</div>';
+//            echo '</div>';
+//            echo '</div>';
+//            echo '<form class="blogPostForm" action="#" method="post" enctype="multipart/form-data">';
+//            echo '<label for="title">Blog Title</label>';
+//            echo '<input value="' . $row['title'] . ' " type="text" class="blogInput form-control" name="title">';
+//            echo '<label for="body">Blog Content</label>';
+//            echo '<textarea class="form-control content" name="body" id="body" cols="30" rows="10">'. $row['body'] .'</textarea>';
+//            echo '<label for="imageToUpload">Upload Featured Image</label>';
+//            echo '<input class="imgInput" type="file" name="imageToUpload">';
+//            echo '<input value="'. $row['id'] .'" type="text" name="id" hidden>';
+//            echo '<button class="btn btn-primary" type="submit">Edit Blog Post</button>';
+//            echo '</form>';
+//
+//        }
+//    }
     ?>
 
 </div>

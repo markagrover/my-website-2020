@@ -34,7 +34,7 @@
                 <li class="projectsLink"><a href="#">Projects</a></li>
                 <?php
                     include_once 'db_connection.php';
-                    $sql = "SELECT * FROM post LIMIT 1";
+                    $sql = "SELECT * FROM post WHERE status=1 LIMIT 1";
                     $result = $conn->query($sql);
                     if($result->rowCount() > 0){
                         echo '<li class="blogPostsLink"><a href="#">Blog Articles</a></li>';
