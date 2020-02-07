@@ -198,6 +198,7 @@ label {
 	/*border-radius:10px;*/
 }
 
+
 label[for='imageToUpload'] {
 	margin-top: 50px;
 }
@@ -256,7 +257,7 @@ label[for='imageToUpload'] {
 .inlineImageInputGroup {
 	display: inline-block;
 	position: relative;
-	border: 1px solid #FFF;
+
 }
 /* Small devices (portrait tablets and large phones, 600px and up) */
 @media only screen and (min-width: 300px) and (max-width: 992px) {

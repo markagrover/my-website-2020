@@ -37,6 +37,8 @@ function getAllBlogPosts(){
     $result = $conn->query($sql);
     if ($result->rowCount() > 0) {
         echo '<div class="articlesContainer">';
+        echo '<h2 class="publishedArticles">Published Articles</h2>';
+
         echo '<div class="row">';
         foreach($result as $row){
             echo '<a href=article.php?id='. $row['id'] . '>';
@@ -185,5 +187,35 @@ function recent_post(){
             echo '</a>';
         }
 
+    }
+}
+
+function getAllUnpublishedBlogPost(){
+    include 'db_connection.php';
+    $sql = "SELECT * FROM post WHERE status=0";
+    $result = $conn->query($sql);
+    if ($result->rowCount() > 0) {
+        echo '<div class="articlesContainer">';
+        echo '<h2 class="unpublishedArticles">UnPublished Articles</h2>';
+        echo '<div class="row">';
+        foreach($result as $row){
+            echo '<a href=article.php?id='. $row['id'] . '>';
+            echo '<div class="blogArticle">';
+            echo '<h2 class="blogPostTitle">'. $row['title'] .'</h2>';
+            echo '<p class="blogPostDate">Published On '. $row['date'] .'</p>';
+            echo '<div class="blogContainer">';
+            if($row['img'] != ''){
+                echo '<img class="blogImage" src="'. $row['img'] .'"/>';
+            }
+            echo '<div class="blogContent">';
+            echo '<div class="blogExcerpt">'. $row['excerpt'] .'</div>';
+            echo '</div>';
+            echo '</div>';
+            echo '</div>';
+            echo '</a>';
+
+        }
+        echo '</div>';
+        echo '</div>';
     }
 }

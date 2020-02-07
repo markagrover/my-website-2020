@@ -5,6 +5,7 @@
  * Date: 1/26/20
  * Time: 11:37 AM
  */
+session_start();
 include_once 'functions.php';
 ?>
 <!DOCTYPE html>
@@ -28,6 +29,15 @@ include_once 'functions.php';
             <ul class="hideNav navigation">
 
                 <li><a class="indexLink" href="index.php">Home</a></li>
+                <?php
+
+                if(isset($_SESSION['logged_in']) && $_SESSION['logged_in'] == true){
+                    echo '<li><a class="indexLink" href="blogs.php">Blogs</a></li>';
+                    echo '<li><a class="indexLink" href="admin.php">Contacts</a></li>';
+                    echo '<li><a class="indexLink" href="blog.php">New Post</a></li>';
+                    echo '<li><a class="indexLink" href="logout.php">Logout</a></li>';
+                }
+                ?>
             </ul>
             <a href="#" class="hamburgerIcon">
             <i class="fa fa-bars"></i>
@@ -36,6 +46,12 @@ include_once 'functions.php';
     </header>
     <?php
     getAllBlogPosts();
+    ?>
+    <?php
+
+    if(isset($_SESSION['logged_in']) && $_SESSION['logged_in'] == true){
+        getAllUnpublishedBlogPost();
+    }
     ?>
     <script type="text/javascript" src="js/toggleMobileNav.js"></script>
     <script type="text/javascript" src="js/matchHeightJquery.js"></script>

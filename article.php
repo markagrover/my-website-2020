@@ -27,6 +27,15 @@ include_once 'functions.php';
 
                 <li><a class="indexLink" href="index.php">Home</a></li>
                 <li><a class="postLink" href="articles.php">Posts</a></li>
+                <?php
+
+                if(isset($_SESSION['logged_in']) && $_SESSION['logged_in'] == true){
+                    echo '<li><a class="indexLink" href="blogs.php">Blogs</a></li>';
+                    echo '<li><a class="indexLink" href="admin.php">Contacts</a></li>';
+                    echo '<li><a class="indexLink" href="blog.php">New Post</a></li>';
+                    echo '<li><a class="indexLink" href="logout.php">Logout</a></li>';
+                }
+                ?>
             </ul>
             <a href="#" class="hamburgerIcon"">
             <!--                <span class="bar"></span>-->

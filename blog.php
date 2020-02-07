@@ -22,7 +22,22 @@ if(isset($_SESSION['logged_in']) && $_SESSION['logged_in'] == true){ ?>
         <link rel="stylesheet" href="rich_text_editor/src/richtext.min.css">
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css" integrity="sha384-HSMxcRTRxnN+Bdg0JdbxYKrThecOKuH5zCYotlSAcp1+c8xmyTe9GYg1l9a69psu" crossorigin="anonymous">
         <link rel="stylesheet" href="css/blog.css">
+        <style>
+            .blogPostForm #checkBoxGroup {
+                text-align: right;
+                position: relative;
+                width: 50px;
+                float: right;
+                margin-bottom: 10px;
+            }
+            .blogInput {
+                margin-bottom: 30px;
+            }
+            label[for='body']{
+                margin-bottom: 30px;
+            }
 
+        </style>
     </head>
     <body>
         <header>
@@ -77,6 +92,11 @@ if(isset($_SESSION['logged_in']) && $_SESSION['logged_in'] == true){ ?>
             ?>
 
             <form class="blogPostForm" action="#" method="post" enctype="multipart/form-data">
+                <div id="checkBoxGroup">
+                    <label for="status">Published</label>
+                    <input type="checkbox" class="checkBox" name="status" value="1">
+                </div>
+
                 <label for="title">Blog Title</label>
                 <input type="text" class="blogInput form-control" name="title">
                 <label for="body">Blog Content</label>

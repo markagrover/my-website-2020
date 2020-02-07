@@ -68,13 +68,18 @@ if(isset($_POST['title'])){
             echo 'Caught exception: ',  $e->getMessage(), "\n";
         }
     } else {
+        if(isset($_POST['status'])){
+            $status = 1;
+        } else {
+            $status = 0;
+        }
         $body = $_POST['body'];;
         $excerpt = truncate(strip_tags($body));
         $title = htmlspecialchars($_POST['title']);
         $date = date("Y/m/d");
-        $data = [$title, $body, $excerpt, $date];
+        $data = [$title, $body, $excerpt, $date, $status];
         try {
-            $sql = "INSERT INTO post (title, body, excerpt, date) VALUES (?,?,?,?)";
+            $sql = "INSERT INTO post (title, body, excerpt, date, status) VALUES (?,?,?,?,?)";
             $stmt= $conn->prepare($sql);
             $stmt->execute($data);
             echo '<script> window.location = "articles.php"; </script>';

@@ -13,8 +13,7 @@ try {
     $sql = "DELETE FROM post WHERE id ='$id'";
     $stmt= $conn->prepare($sql);
     $stmt->execute();
-    echo '<script> window.location.href = "blogs.php"</script>';
-
+    echo '<script> window.location.href = "blogs.php";</script>';
 } catch (Exception $e) {
     echo 'Caught exception: ',  $e->getMessage(), "\n";
 }

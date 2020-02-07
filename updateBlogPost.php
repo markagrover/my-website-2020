@@ -6,6 +6,7 @@
  * Time: 7:11 PM
  */
 include_once 'functions.php';
+include_once 'db_connection.php';
 
 if(isset($_POST['title'])){
     if($_FILES['imageToUpload']['name'] != ''){
@@ -79,7 +80,7 @@ if($_FILES['imageToUpload']['name'] != ''){
     $data = [$title, $body, $excerpt, $date, $id];
     try {
         $sql = "UPDATE post SET title=?, body=?, excerpt=?, date=? WHERE id=?";
-        $stmt= $conn->prepare($sql);
+        $stmt = $conn->prepare($sql);
         $stmt->execute($data);
         echo '<script> window.location = "article.php?id='. $id. '"; </script>';
 
