@@ -10,4 +10,4 @@ $id = $_GET['id'];
 $sql = "DELETE FROM messages WHERE id ='$id'";
 $stmt= $conn->prepare($sql);
 $stmt->execute();
-echo '<script> window.location.href = "admin.php"</script>';
+echo '<script> window.location.href = "blogs.php"</script>';

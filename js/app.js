@@ -58,8 +58,9 @@ function titleFlip(target){
   }
 }
 window.addEventListener('scroll', function(e){
-
-  titleFlip('.blogTitle');
+  if(document.querySelector('.blogTitle') != null){
+    titleFlip('.blogTitle');
+  }
   titleFlip('.servicesTitle');
   titleFlip('.projectsTitle');
   titleFlip('.aboutTitle');
@@ -123,12 +124,13 @@ var contactLink = document.querySelector(".contactLink");
 contactLink.addEventListener('click', function(){
    smoothScroll('#contact', 1500);
 });
+if(document.querySelector(".blogPostsLink") != null){
+  var blogLink = document.querySelector(".blogPostsLink");
+  blogLink.addEventListener('click', function(){
+    smoothScroll('#blogPost', 1500);
+  });
+}
 
-var blogLink = document.querySelector(".blogPostsLink");
-blogLink.addEventListener('click', function(){
-  console.log('clicked');
-  smoothScroll('#blogPost', 1500);
-});
 
 // google map
 function initMap() {

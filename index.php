@@ -1,6 +1,7 @@
 <?php
 //    include_once 'db_connection.php';
     include_once 'functions.php';
+session_start();
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -41,6 +42,15 @@
                     }
                 ?>
                 <li class="contactLink"><a href="#">Contact</a></li>
+                <?php
+                if(isset($_SESSION['logged_in']) && $_SESSION['logged_in'] == true){
+                    echo '<li class="newBlogPostLink"><a href="blog.php">New Post</a></li>';
+                    echo '<li class="blogsLink"><a href="blogs.php">Posts</a></li>';
+                    echo '<li class="adminLink"><a href="admin.php">Admin</a></li>';
+                    echo '<li class="logoutLink"><a href="logout.php">Logout</a></li>';
+
+                }
+                ?>
             </ul>
             <a href="#" class="hamburgerIcon"">
                 <i class="fa fa-bars"></i>

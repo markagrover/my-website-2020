@@ -13,7 +13,7 @@ try {
     $sql = "UPDATE post SET status=? WHERE id=?";
     $stmt= $conn->prepare($sql);
     $stmt->execute([1,$id]);
-    echo '<script> window.location = "blogs.php"; </script>';
+    echo '<script> window.location.href = "blogs.php"; </script>';
 
 } catch (Exception $e) {
     echo 'Caught exception: ',  $e->getMessage(), "\n";

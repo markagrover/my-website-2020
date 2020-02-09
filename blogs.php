@@ -82,7 +82,6 @@ if(isset($_SESSION['logged_in']) && $_SESSION['logged_in'] == true){ ?>
     </div>
     </body>
     <script src="js/blogs.js"></script>
-    <!--    <script type="text/javascript" src="js/toggleMobileNav.js"></script>-->
     </html>
     <?php
 } else {
