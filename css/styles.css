@@ -599,7 +599,7 @@ i.fa-twitter-square {
 }
 
 /* Small devices (portrait tablets and large phones, 600px and up) */
-@media only screen and (min-width: 300px) and (max-width: 992px) {
+@media only screen and (min-width: 300px) and (max-width: 1182px) {
 
     .imgContainer {
         display: flex;
@@ -684,7 +684,7 @@ i.fa-twitter-square {
     nav ul li a {
         display: inline-block;
         width: 100%;
-	      font-size: 1.5em;
+	      font-size: 1em;
         border-top: 1px solid var(--main-mobile-nav-links-border-color);
         color: var(--main-mobile-nav-links-color);
     }

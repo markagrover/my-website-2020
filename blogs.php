@@ -67,7 +67,7 @@ if(isset($_SESSION['logged_in']) && $_SESSION['logged_in'] == true){ ?>
                     }
                     echo "<td><a class='btn btn-primary' href='edit_blog.php?id=". $id. "'>Edit Post</a></td>";
 
-                    echo "<td class='delete'><a class='deleteRecord btn btn-primary' href=\"deletePost.php?id=$id\">X</a></td>";
+                    echo "<td class='delete'><a class='btn btn-primary' href=\"deletePost.php?id=$id\">Delete</a></td>";
                     if($row['status'] == 0){
                         echo "<td class='publish'><a class='publishRecord btn btn-primary' href=\"publish.php?id=$id\">Publish</a></td>";
                     } else if($row['status'] == 1){

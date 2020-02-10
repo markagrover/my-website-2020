@@ -31,20 +31,20 @@ window.addEventListener('scroll', removeNavOnScroll);
 
 // stop form from submitting
 //this is the id of the form
-$(".deleteRecord").click(function(e) {
-
-  e.preventDefault(); // avoid to execute the actual submit of the form.
-
-  var link = $(this);
-  var url = link.attr('href');
-
-  $.ajax({
-    type: "get",
-    url: url,
-    // data: form.serialize(),// serializes the form's elements.
-    success: function(data)
-    {
-      window.location.href = "../admin.php";
-    }
-  });
-});
+// $(".deleteRecord").click(function(e) {
+//
+//   e.preventDefault(); // avoid to execute the actual submit of the form.
+//
+//   var link = $(this);
+//   var url = link.attr('href');
+//
+//   $.ajax({
+//     type: "get",
+//     url: url,
+//     // data: form.serialize(),// serializes the form's elements.
+//     success: function(data)
+//     {
+//       window.location.href = "../admin.php";
+//     }
+//   });
+// });
