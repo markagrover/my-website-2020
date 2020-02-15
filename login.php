@@ -46,15 +46,17 @@ include_once 'db_connection.php';
                 </h2>
                 <?php
                 if(isset($_POST['username'])) {
-
-
                     $username = $_POST['username'];
                     $pass = $_POST['password'];
                     $sql = "SELECT * FROM users WHERE username='$username' && password='$pass'";
                     $result = $conn->query($sql);
                     if ($result->rowCount() > 0) {
+                        foreach ($result as $row){
+                            $_SESSION['admin'] = $row['role'];
+                        }
                         $_SESSION['logged_in'] = 'true';
                         $_SESSION['username'] = $username;
+
                         echo '<script>
                                     var form = document.querySelector(".loginForm");
                                     form.remove();
