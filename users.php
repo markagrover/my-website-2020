@@ -87,10 +87,10 @@ if(isset($_SESSION['logged_in']) && $_SESSION['logged_in'] == true && $_SESSION[
         </table>
     </div>
     </body>
-    <script src="js/blogs.js"></script>
+    <script src="js/toggleMobileNav.js"></script>
     </html>
     <?php
 } else {
-    header("location: home.php");
+    header("location: index.php");
 }
 ?>

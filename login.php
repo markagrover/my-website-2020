@@ -48,16 +48,17 @@ include_once 'db_connection.php';
                 if(isset($_POST['username'])) {
                     $username = $_POST['username'];
                     $pass = $_POST['password'];
-                    $sql = "SELECT * FROM users WHERE username='$username' && password='$pass'";
+                    $sql = "SELECT * FROM users WHERE username='$username'";
                     $result = $conn->query($sql);
                     if ($result->rowCount() > 0) {
-                        foreach ($result as $row){
-                            $_SESSION['admin'] = $row['role'];
-                        }
-                        $_SESSION['logged_in'] = 'true';
-                        $_SESSION['username'] = $username;
 
-                        echo '<script>
+                        foreach ($result as $row) {
+                            if (password_verify($pass, $row['password'])) {
+                                if ($row['status'] == 1) {
+                                    $_SESSION['logged_in'] = 'true';
+                                    $_SESSION['username'] = $username;
+                                    $_SESSION['admin'] = $row['role'];
+                                    echo '<script>
                                     var form = document.querySelector(".loginForm");
                                     form.remove();
                                     var message = document.querySelector(".loginMessage");
@@ -65,8 +66,22 @@ include_once 'db_connection.php';
                                     setTimeout(function(){
                                         window.location.href = "admin.php";
                                     },200);
+                                
+                                
                                     
                               </script>';
+                                } else {
+                                    echo '<p class="warning">Your Not Registered. Please wait 24-48hrs for our staff to activate your membership.</p>';
+                                }
+                                echo '<p class="warning">Username Password Combo not Working!</p>';
+                            } else {
+                                echo '<p class="warning">Username Password Combo not Working!</p>';
+
+                            }
+
+                        }
+
+
                     } else {
                         echo "<p class='warning'>wrong username or password</p>";
                     }
