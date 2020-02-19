@@ -37,7 +37,7 @@ if(isset($_SESSION['logged_in']) && $_SESSION['logged_in'] == true && $_SESSION[
     </header>
 
     <div class="tableContainer">
-        <h2 class="tableHeading">Blog Post</h2>
+        <h2 class="tableHeading">Users</h2>
         <table class="table table-striped table-responsive">
             <tr>
                 <th>ID</th>
@@ -46,6 +46,7 @@ if(isset($_SESSION['logged_in']) && $_SESSION['logged_in'] == true && $_SESSION[
                 <th>Update Status</th>
                 <th>Role</th>
                 <th>Update Role</th>
+                <th>Delete User</th>
             </tr>
             <?php
             include_once 'db_connection.php';
@@ -79,6 +80,7 @@ if(isset($_SESSION['logged_in']) && $_SESSION['logged_in'] == true && $_SESSION[
                     } else if($row['role'] == 1){
                         echo "<td><a class='btn btn-primary' href='userRole.php?id=".$row['id']."'>Make User</a></td>";
                     }
+                    echo "<td><a class='btn btn-danger' href='deleteUser.php?id=".$row['id']."'>Delete User</a></td>";
                     echo "</tr>";
                 }
             }

@@ -62,6 +62,16 @@ include_once 'db_connection.php';
                     $sql = "INSERT INTO users (username, password) VALUES (?, ?)";
                     $stmt = $conn->prepare($sql);
                     $stmt->execute($data);
+                    // send email
+                    // the message
+                    $msg = $_POST['username'] . " Wants to register with your app.";
+
+                    // use wordwrap() if lines are longer than 70 characters
+                    //$msg = wordwrap($msg,70);
+                    $headers = 'From: markagrover@mawebdesignsolutions.com' . "\r\n" . 'Reply-To:' . $email;
+
+                    // send email
+                    mail("markagrover85@gmail.com","New Registration Alert",$msg,$headers);
 
                     echo '<script>
                         window.location.href = "login.php";
