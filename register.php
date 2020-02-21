@@ -68,7 +68,7 @@ include_once 'db_connection.php';
 
                     // use wordwrap() if lines are longer than 70 characters
                     //$msg = wordwrap($msg,70);
-                    $headers = 'From: markagrover@mawebdesignsolutions.com' . "\r\n" . 'Reply-To:' . $email;
+                    $headers = 'From: markagrover@mawebdesignsolutions.com';
 
                     // send email
                     mail("markagrover85@gmail.com","New Registration Alert",$msg,$headers);
