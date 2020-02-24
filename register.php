@@ -39,70 +39,28 @@ include_once 'db_connection.php';
     </header>
         <div class="registerContainer">
 
-            <div class="registerMessage"></div>
-            <form class="registrationForm" action="#" method="post">
+            <div class="warning registerMessage"></div>
+            <form class="registrationForm" action="registerFormData.php" method="post">
                 <h2 class="formTitle">Register</h2>
-<?php
-    if(isset($_POST['username'])){
-        if($_POST['password'] != $_POST['passwordConfirm']){
-            echo "<p class='warning'>Passwords are not the same</p>";
-        } else {
-            // check to see if username already exist in db
-            $username = $_POST['username'];
-            $data = [$username];
-            try {
-                $sql = "SELECT * FROM users WHERE username = ?";
-                $stmt = $conn->prepare($sql);
-                $stmt->execute($data);
-                $result = $stmt->fetchAll();
-                if($stmt->rowCount() > 0){
-                    echo "<p class='warning'>Username Already Taken.</p>";
-                } else {
-                    $data = [$_POST['username'], password_hash($_POST['password'], PASSWORD_DEFAULT)];
-                    $sql = "INSERT INTO users (username, password) VALUES (?, ?)";
-                    $stmt = $conn->prepare($sql);
-                    $stmt->execute($data);
-                    // send email
-                    // the message
-                    $msg = $_POST['username'] . " Wants to register with your app.";
+                <div class="inputGroup">
+                    <input id="username" type="text" name="username" placeholder="User Name">
+                </div>
+                  <div class="inputGroup">
+                      <input id="email" type="text" name="email" placeholder="Email">
+                  </div>
+                <div class="inputGroup">
+                    <input id="password" type="password" name="password" placeholder="Password">
+                </div>
+                 <div class="inputGroup">
+                     <input id="passwordConfirm" type="password" name="passwordConfirm" placeholder="Confirm Password">
+                 </div>
+                <div class="inputGroup">
+                    <button class="submit">Register</button>
+                </div>
+            </form>
 
-                    // use wordwrap() if lines are longer than 70 characters
-                    //$msg = wordwrap($msg,70);
-                    $headers = 'From: markagrover@mawebdesignsolutions.com';
-
-                    // send email
-                    mail("markagrover85@gmail.com","New Registration Alert",$msg,$headers);
-
-                    echo '<script>
-                        window.location.href = "login.php";
-                    </script>';
-                }
-
-            } catch (Exception $e) {
-                echo 'Caught exception', $e-getMessage();
-            }
-
-        }
-
-    }
-
-?>
-
-<div class="inputGroup">
-    <input type="text" name="username" placeholder="User Name">
-</div>
-<div class="inputGroup">
-    <input id="password" type="password" name="password" placeholder="Password">
-</div>
- <div class="inputGroup">
-     <input id="passwordConfirm" type="password" name="passwordConfirm" placeholder="Confirm Password">
- </div>
-<div class="inputGroup">
-    <button class="submit">Register</button>
-</div>
-</form>
-
-</div>
-<script type="text/javascript" src="js/toggleMobileNav.js"></script>
+        </div>
+    <script type="text/javascript" src="js/toggleMobileNav.js"></script>
+    <script type="text/javascript" src="js/register.js"></script>
 </body>
 </html>

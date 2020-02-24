@@ -66,9 +66,6 @@ include_once 'db_connection.php';
                                     setTimeout(function(){
                                         window.location.href = "admin.php";
                                     },200);
-                                
-                                
-                                    
                               </script>';
                                 } else {
                                     echo '<p class="warning">Your Not Registered. Please wait 24-48hrs for our staff to activate your membership.</p>';
@@ -76,12 +73,8 @@ include_once 'db_connection.php';
                                 echo '<p class="warning">Username Password Combo not Working!</p>';
                             } else {
                                 echo '<p class="warning">Username Password Combo not Working!</p>';
-
                             }
-
                         }
-
-
                     } else {
                         echo "<p class='warning'>wrong username or password</p>";
                     }
