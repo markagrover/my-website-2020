@@ -22,8 +22,10 @@ if(isset($_POST['username'])){
                 $result2 = $stmt2->fetchAll();
                 if($stmt->rowCount() > 0) {
                     throw new Exception('Username Already Taken.', 201);
-                } else if ($stmt2->rowCount() > 0){
+                } else if ($stmt2->rowCount() > 0) {
                     throw new Exception('Email already exist.', 301);
+                } else if (strlen($_POST['password']) < 8) {
+                    throw new Exception('Password must be 8 characters long', 401);
                 } else {
                     $data = [$email, $_POST['username'], password_hash($_POST['password'], PASSWORD_DEFAULT)];
                     $sql = "INSERT INTO users (email, username, password) VALUES (?, ?, ?)";
@@ -40,9 +42,9 @@ if(isset($_POST['username'])){
                     // send email
                     mail("markagrover85@gmail.com","New Registration Alert",$msg,$headers);
 
-                    echo '<script>
-                        window.location.href = "login.php";
-                    </script>';
+//                    echo '<script>
+//                        window.location.href = "login.php";
+//                    </script>';
                 }
 
             } catch (Exception $e) {
