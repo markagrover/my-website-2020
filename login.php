@@ -7,9 +7,11 @@
  */
 session_start();
 include_once 'db_connection.php';
-?>
-<!DOCTYPE html>
-<html lang="en">
+
+if(!isset($_SESSION['logged_in'])){
+ ?>
+    <!DOCTYPE html>
+    <html lang="en">
     <head>
         <link rel="stylesheet" href="css/login.css">
         <link href="https://fonts.googleapis.com/css?family=Raleway:500i&display=swap" rel="stylesheet">
@@ -37,28 +39,28 @@ include_once 'db_connection.php';
             </a>
         </nav>
     </header>
-        <div class="loginContainer">
+    <div class="loginContainer">
 
-            <div class="loginMessage"></div>
-            <form class="loginForm" action="#" method="post">
-                <h2 class="formTitle">
-                    Login
-                </h2>
-                <?php
-                if(isset($_POST['username'])) {
-                    $username = $_POST['username'];
-                    $pass = $_POST['password'];
-                    $sql = "SELECT * FROM users WHERE username='$username'";
-                    $result = $conn->query($sql);
-                    if ($result->rowCount() > 0) {
+        <div class="loginMessage"></div>
+        <form class="loginForm" action="#" method="post">
+            <h2 class="formTitle">
+                Login
+            </h2>
+            <?php
+            if(isset($_POST['username'])) {
+                $username = $_POST['username'];
+                $pass = $_POST['password'];
+                $sql = "SELECT * FROM users WHERE username='$username'";
+                $result = $conn->query($sql);
+                if ($result->rowCount() > 0) {
 
-                        foreach ($result as $row) {
-                            if (password_verify($pass, $row['password'])) {
-                                if ($row['status'] == 1) {
-                                    $_SESSION['logged_in'] = 'true';
-                                    $_SESSION['username'] = $username;
-                                    $_SESSION['admin'] = $row['role'];
-                                    echo '<script>
+                    foreach ($result as $row) {
+                        if (password_verify($pass, $row['password'])) {
+                            if ($row['status'] == 1) {
+                                $_SESSION['logged_in'] = 'true';
+                                $_SESSION['username'] = $username;
+                                $_SESSION['admin'] = $row['role'];
+                                echo '<script>
                                     var form = document.querySelector(".loginForm");
                                     form.remove();
                                     var message = document.querySelector(".loginMessage");
@@ -67,32 +69,40 @@ include_once 'db_connection.php';
                                         window.location.href = "admin.php";
                                     },200);
                               </script>';
-                                } else {
-                                    echo '<p class="warning">Your Not Registered. Please wait 24-48hrs for our staff to activate your membership.</p>';
-                                }
                             } else {
-                                echo '<p class="warning">Username Password Combo not Working!</p>';
+                                echo '<p class="warning">Your Not Registered. Please wait 24-48hrs for our staff to activate your membership.</p>';
                             }
+                        } else {
+                            echo '<p class="warning">Username Password Combo not Working!</p>';
                         }
-                    } else {
-                        echo "<p class='warning'>wrong username or password</p>";
                     }
+                } else {
+                    echo "<p class='warning'>wrong username or password</p>";
                 }
-                ?>
+            }
+            ?>
 
-                <div class="inputGroup">
-                    <input type="text" name="username" placeholder="User Name">
-                </div>
-                <div class="inputGroup">
-                    <input type="password" name="password" placeholder="Password">
-                </div>
-                <div class="inputGroup">
-                    <button class="submit">Submit</button>
-                </div>
-            </form>
+            <div class="inputGroup">
+                <input type="text" name="username" placeholder="User Name">
+            </div>
+            <div class="inputGroup">
+                <input type="password" name="password" placeholder="Password">
+            </div>
+            <div class="inputGroup">
+                <button class="submit">Submit</button>
+            </div>
+        </form>
 
-        </div>
+    </div>
     <script type="text/javascript" src="js/toggleMobileNav.js"></script>
     </body>
-</html>
+    </html>
+<?php
+} else {
+    echo '<script>
+    window.location.href = "index.php";
+</script>';
+}
+?>
+
 

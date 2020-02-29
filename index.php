@@ -44,10 +44,16 @@ session_start();
                 <li class="contactLink"><a href="#">Contact</a></li>
                 <?php
                 if(isset($_SESSION['logged_in']) && $_SESSION['logged_in'] == true){
-                    echo '<li class="newBlogPostLink"><a href="blog.php">New Post</a></li>';
-                    echo '<li class="blogsLink"><a href="blogs.php">Posts</a></li>';
-                    echo '<li class="adminLink"><a href="admin.php">Admin</a></li>';
                     echo '<li class="logoutLink"><a href="logout.php">Logout</a></li>';
+                }
+                if(isset($_SESSION['logged_in']) && $_SESSION['logged_in'] == true && $_SESSION['admin'] == 1){
+                    echo '<li class="adminLink"><a href="admin.php">Admin</a></li>';
+                    echo '<li class="blogsLink"><a href="blogs.php">Posts</a></li>';
+                    echo '<li class="newBlogPostLink"><a href="blog.php">New Post</a></li>';
+                }
+                if(!isset($_SESSION['logged_in'])){
+                    echo '<li class="loginLink"><a href="login.php">Login</a></li>';
+                    echo '<li class="registerLink"><a href="register.php">Register</a></li>';
 
                 }
                 ?>

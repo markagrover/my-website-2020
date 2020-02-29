@@ -6,7 +6,7 @@
  * Time: 2:01 PM
  */
 session_start();
-if(isset($_SESSION['logged_in']) && $_SESSION['logged_in'] == true){ ?>
+if(isset($_SESSION['logged_in']) && $_SESSION['logged_in'] == true && $_SESSION['admin'] == 1){ ?>
     <!DOCTYPE html>
     <html lang="en">
     <head>
@@ -27,6 +27,7 @@ if(isset($_SESSION['logged_in']) && $_SESSION['logged_in'] == true){ ?>
             <ul class="hideNav navigation">
                 <li><a class="indexLink" href="index.php">Home</a></li>
                 <li><a class="blogsLink" href="blogs.php">Post</a></li>
+                <li><a class="usersLink" href="users.php">Users</a></li>
                 <li><a class="blogLink" href="blog.php">New Blog Post</a></li>
                 <li><a class="logoutLink" href="logout.php">Logout</a></li>
 
